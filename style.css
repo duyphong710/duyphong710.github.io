@@ -2365,3 +2365,28 @@ h3 .vi {
 .award-secondary + .group-label {
   margin-top: 40px;
 }
+
+/* =====================================================================
+   HIDE EMPTY PLACEHOLDERS
+   While <body> has the class "hide-empty", visitors do not see:
+   - any [placeholder] text,
+   - the " —" right before an inline placeholder (.ph-dash),
+   - any block that only contains placeholders (.ph-only).
+   To show everything again, remove class="hide-empty" from <body>
+   in index.html. Nothing is deleted: the text stays in the code.
+   ===================================================================== */
+.hide-empty .placeholder,
+.hide-empty .ph-dash,
+.hide-empty .ph-only {
+  display: none !important;
+}
+
+/* With the "News Search" card hidden, FIREGUIDE uses the full width */
+.hide-empty .projects-grid:has(> .ph-only) {
+  grid-template-columns: 1fr;
+}
+
+/* With the reflection hidden, the contact card stands on its own */
+.hide-empty .contact-grid:has(> .ph-only) {
+  grid-template-columns: minmax(0, 560px);
+}

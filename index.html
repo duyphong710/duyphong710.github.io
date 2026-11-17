@@ -50,7 +50,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<!-- HIDE EMPTY PLACEHOLDERS: the class "hide-empty" hides every [placeholder]
+     and every block that only contains placeholders. Remove the class
+     (write just <body>) to show all placeholders again. -->
+<body class="hide-empty">
 
   <!-- ===================== HEADER / NAVIGATION ===================== -->
   <header class="site-header" id="top">
@@ -309,7 +312,7 @@
               <span class="en">I am interested in studying Computer Science and in exploring how technology can address meaningful real-world challenges.</span>
               <span class="vi" lang="vi">Tôi mong muốn theo học ngành Khoa học máy tính và tìm hiểu cách công nghệ có thể góp phần giải quyết những thách thức có ý nghĩa trong thực tế.</span>
             </p>
-            <p>
+            <p class="ph-only">
               <span class="en"><span class="placeholder">[Specific fields or questions you would like to explore further.]</span></span>
               <span class="vi" lang="vi"><span class="placeholder">[Những lĩnh vực hoặc câu hỏi cụ thể bạn muốn tìm hiểu sâu hơn.]</span></span>
             </p>
@@ -324,7 +327,7 @@
               <span class="en">I hope to use technical knowledge, research and collaboration to develop solutions that are useful to society.</span>
               <span class="vi" lang="vi">Tôi mong muốn vận dụng kiến thức kỹ thuật, nghiên cứu và sự hợp tác để phát triển những giải pháp hữu ích cho xã hội.</span>
             </p>
-            <p>
+            <p class="ph-only">
               <span class="en"><span class="placeholder">[An area or community you would most like to contribute to.]</span></span>
               <span class="vi" lang="vi"><span class="placeholder">[Lĩnh vực hoặc cộng đồng bạn muốn đóng góp nhiều nhất.]</span></span>
             </p>
@@ -615,8 +618,8 @@
                 </li>
                 <li class="award">
                   <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
-                  <p><span class="en">Third Prize, FIREGUIDE intelligent rescue robot project — <span class="placeholder">[competition name]</span></span>
-                     <span class="vi" lang="vi">Giải Ba, dự án robot cứu hộ thông minh FIREGUIDE — <span class="placeholder">[tên cuộc thi]</span></span></p>
+                  <p><span class="en">Third Prize, FIREGUIDE intelligent rescue robot project<span class="ph-dash"> —</span> <span class="placeholder">[competition name]</span></span>
+                     <span class="vi" lang="vi">Giải Ba, dự án robot cứu hộ thông minh FIREGUIDE<span class="ph-dash"> —</span> <span class="placeholder">[tên cuộc thi]</span></span></p>
                 </li>
               </ul>
             </div>
@@ -841,14 +844,14 @@
             </p>
 
             <!-- Links: replace href="#" with real addresses, delete any you don't need -->
-            <ul class="media-links">
-              <li><a href="#" class="placeholder">
+            <ul class="ph-only media-links">
+              <li class="ph-only"><a href="#" class="placeholder">
                 <span class="en">[Certificate — Green Intelligence Challenge 2026]</span>
                 <span class="vi" lang="vi">[Chứng nhận — Green Intelligence Challenge 2026]</span></a></li>
-              <li><a href="#" class="placeholder">
+              <li class="ph-only"><a href="#" class="placeholder">
                 <span class="en">[Demo or video link]</span>
                 <span class="vi" lang="vi">[Liên kết demo hoặc video]</span></a></li>
-              <li><a href="#" class="placeholder">
+              <li class="ph-only"><a href="#" class="placeholder">
                 <span class="en">[Report, slides or code repository]</span>
                 <span class="vi" lang="vi">[Báo cáo, slide hoặc kho mã nguồn]</span></a></li>
             </ul>
@@ -914,7 +917,7 @@
                 <span class="en">Audio is processed on the user’s own device, and only anonymised data is sent.</span>
                 <span class="vi" lang="vi">Âm thanh được xử lý ngay trên thiết bị của người dùng, và chỉ dữ liệu đã ẩn danh mới được gửi đi.</span>
               </p>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[Programming languages, models and tools used.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Ngôn ngữ lập trình, mô hình và công cụ đã sử dụng.]</span></span>
               </p>
@@ -925,7 +928,7 @@
                 <span class="en">Third Prize, Green Intelligence Challenge 2026: Innovating with AI! — team award, £500 prize. Grand Finale: 29 July 2026, Phenikaa University, Hanoi.</span>
                 <span class="vi" lang="vi">Giải Ba, Green Intelligence Challenge 2026: Innovating with AI! — giải của nhóm, giải thưởng 500 bảng Anh. Vòng chung kết: 29/7/2026, Trường Đại học Phenikaa, Hà Nội.</span>
               </p>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[What the project achieved and what you learned from it.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Kết quả dự án đạt được và điều bạn học được.]</span></span>
               </p>
@@ -972,16 +975,16 @@
                 <span class="vi" lang="vi">Làm thế nào để robot hỗ trợ cứu hộ và sơ tán khi xảy ra hỏa hoạn?</span>
               </p>
             </div>
-            <div class="field">
+            <div class="field ph-only">
               <h4 class="field-label"><span class="en">Objectives</span><span class="vi" lang="vi">Mục tiêu</span></h4>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[What the robot was designed to do.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Robot được thiết kế để làm gì.]</span></span>
               </p>
             </div>
-            <div class="field">
+            <div class="field ph-only">
               <h4 class="field-label"><span class="en">Methodology &amp; technologies</span><span class="vi" lang="vi">Phương pháp &amp; công nghệ</span></h4>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[Hardware, sensors, software and programming languages used.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Phần cứng, cảm biến, phần mềm và ngôn ngữ lập trình đã sử dụng.]</span></span>
               </p>
@@ -989,26 +992,26 @@
             <div class="field">
               <h4 class="field-label"><span class="en">Results &amp; lessons learned</span><span class="vi" lang="vi">Kết quả &amp; bài học</span></h4>
               <p>
-                <span class="en">Third Prize (team award) — <span class="placeholder">[competition name]</span></span>
-                <span class="vi" lang="vi">Giải Ba (giải của nhóm) — <span class="placeholder">[tên cuộc thi]</span></span>
+                <span class="en">Third Prize (team award)<span class="ph-dash"> —</span> <span class="placeholder">[competition name]</span></span>
+                <span class="vi" lang="vi">Giải Ba (giải của nhóm)<span class="ph-dash"> —</span> <span class="placeholder">[tên cuộc thi]</span></span>
               </p>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[What you learned from the project.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Điều bạn học được từ dự án.]</span></span>
               </p>
             </div>
 
             <!-- Images, certificates & links -->
-            <div class="field">
+            <div class="field ph-only">
               <h4 class="field-label"><span class="en">Images, certificates &amp; links</span><span class="vi" lang="vi">Hình ảnh, chứng nhận &amp; liên kết</span></h4>
-              <ul class="media-links">
-                <li><a href="#" class="placeholder">
+              <ul class="ph-only media-links">
+                <li class="ph-only"><a href="#" class="placeholder">
                   <span class="en">[Photo of the robot]</span>
                   <span class="vi" lang="vi">[Ảnh robot]</span></a></li>
-                <li><a href="#" class="placeholder">
+                <li class="ph-only"><a href="#" class="placeholder">
                   <span class="en">[Certificate]</span>
                   <span class="vi" lang="vi">[Chứng nhận]</span></a></li>
-                <li><a href="#" class="placeholder">
+                <li class="ph-only"><a href="#" class="placeholder">
                   <span class="en">[Demo video]</span>
                   <span class="vi" lang="vi">[Video demo]</span></a></li>
               </ul>
@@ -1016,7 +1019,7 @@
           </article>
 
           <!-- ---------- Vietnamese News Search (research) ---------- -->
-          <article class="project-card reveal">
+          <article class="project-card ph-only reveal">
             <div class="card-labels">
               <span class="type-label"><span class="en">Research project</span><span class="vi" lang="vi">Dự án nghiên cứu</span></span>
               <!-- TODO: change to tag-individual or tag-team once confirmed -->
@@ -1050,39 +1053,39 @@
                 <span class="vi" lang="vi">Mô hình tìm kiếm theo từ khóa và mô hình tìm kiếm ngữ nghĩa khác nhau như thế nào khi tìm kiếm tin tức tiếng Việt? <span class="placeholder">[Điều chỉnh câu hỏi chính xác nếu cần.]</span></span>
               </p>
             </div>
-            <div class="field">
+            <div class="field ph-only">
               <h4 class="field-label"><span class="en">Objectives</span><span class="vi" lang="vi">Mục tiêu</span></h4>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[What the research aimed to find out.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Nghiên cứu nhằm tìm hiểu điều gì.]</span></span>
               </p>
             </div>
-            <div class="field">
+            <div class="field ph-only">
               <h4 class="field-label"><span class="en">Methodology &amp; technologies</span><span class="vi" lang="vi">Phương pháp &amp; công nghệ</span></h4>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[Dataset, models compared, evaluation method and tools used.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Bộ dữ liệu, các mô hình được so sánh, phương pháp đánh giá và công cụ đã sử dụng.]</span></span>
               </p>
             </div>
-            <div class="field">
+            <div class="field ph-only">
               <h4 class="field-label"><span class="en">Results &amp; lessons learned</span><span class="vi" lang="vi">Kết quả &amp; bài học</span></h4>
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[Main findings and what you learned.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Kết quả chính và điều bạn học được.]</span></span>
               </p>
             </div>
 
             <!-- Images, certificates & links -->
-            <div class="field">
+            <div class="field ph-only">
               <h4 class="field-label"><span class="en">Images, certificates &amp; links</span><span class="vi" lang="vi">Hình ảnh, chứng nhận &amp; liên kết</span></h4>
-              <ul class="media-links">
-                <li><a href="#" class="placeholder">
+              <ul class="ph-only media-links">
+                <li class="ph-only"><a href="#" class="placeholder">
                   <span class="en">[Research paper or report]</span>
                   <span class="vi" lang="vi">[Bài nghiên cứu hoặc báo cáo]</span></a></li>
-                <li><a href="#" class="placeholder">
+                <li class="ph-only"><a href="#" class="placeholder">
                   <span class="en">[Charts or results table]</span>
                   <span class="vi" lang="vi">[Biểu đồ hoặc bảng kết quả]</span></a></li>
-                <li><a href="#" class="placeholder">
+                <li class="ph-only"><a href="#" class="placeholder">
                   <span class="en">[Code repository]</span>
                   <span class="vi" lang="vi">[Kho mã nguồn]</span></a></li>
               </ul>
@@ -1093,29 +1096,29 @@
 
         <!-- ================= 3. SKILLS & INDEPENDENT LEARNING =================
              Placeholders only: list the skills and learning you can show evidence for. -->
-        <p class="group-label reveal">
+        <p class="group-label ph-only reveal">
           <span class="en">Skills &amp; independent learning</span>
           <span class="vi" lang="vi">Kỹ năng &amp; tự học</span>
         </p>
 
-        <div class="skills-grid">
+        <div class="skills-grid ph-only">
           <div class="skill-card reveal">
             <h4><span class="en">Programming languages</span><span class="vi" lang="vi">Ngôn ngữ lập trình</span></h4>
-            <p>
+            <p class="ph-only">
               <span class="en"><span class="placeholder">[e.g. languages you use regularly]</span></span>
               <span class="vi" lang="vi"><span class="placeholder">[Ví dụ: các ngôn ngữ bạn thường dùng]</span></span>
             </p>
           </div>
           <div class="skill-card reveal">
             <h4><span class="en">Frameworks &amp; tools</span><span class="vi" lang="vi">Thư viện &amp; công cụ</span></h4>
-            <p>
+            <p class="ph-only">
               <span class="en"><span class="placeholder">[AI / ML libraries, hardware, other tools]</span></span>
               <span class="vi" lang="vi"><span class="placeholder">[Thư viện AI / học máy, phần cứng, công cụ khác]</span></span>
             </p>
           </div>
           <div class="skill-card reveal">
             <h4><span class="en">Courses &amp; self-study</span><span class="vi" lang="vi">Khóa học &amp; tự học</span></h4>
-            <p>
+            <p class="ph-only">
               <span class="en"><span class="placeholder">[Online courses, books or topics you studied on your own]</span></span>
               <span class="vi" lang="vi"><span class="placeholder">[Khóa học trực tuyến, sách hoặc chủ đề bạn tự tìm hiểu]</span></span>
             </p>
@@ -1224,7 +1227,7 @@
                 <span class="vi" lang="vi">Thí sinh đến từ 19 đội thuộc năm châu lục, cùng Kuwait tham dự với tư cách quốc gia quan sát viên.</span>
               </p>
               <!-- Placeholder: add only details you can confirm -->
-              <p>
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[In your own words: how you prepared and what you learned.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Bằng lời của bạn: bạn đã chuẩn bị như thế nào và học được gì.]</span></span>
               </p>
@@ -1408,7 +1411,7 @@
               <span class="en">I received the UK Experiencing &amp; Phoenix Heart Scholarship from UWE Bristol – Phenikaa Campus, with a value of 136,500,000 VND.</span>
               <span class="vi" lang="vi">Tôi nhận Học bổng UK Experiencing &amp; Phoenix Heart của UWE Bristol – Phenikaa Campus, trị giá 136.500.000 VND.</span>
             </p>
-            <p>
+            <p class="ph-only">
               <span class="en"><span class="placeholder">[What the scholarship covers, if you would like to add it.]</span></span>
               <span class="vi" lang="vi"><span class="placeholder">[Học bổng hỗ trợ những gì, nếu bạn muốn bổ sung.]</span></span>
             </p>
@@ -1445,8 +1448,8 @@
           <li>
             <span class="result-year">2026</span>
             <div class="result-body">
-              <p><span class="en">Third Prize, FIREGUIDE intelligent rescue robot project — <span class="placeholder">[competition name]</span></span>
-                 <span class="vi" lang="vi">Giải Ba, dự án robot cứu hộ thông minh FIREGUIDE — <span class="placeholder">[tên cuộc thi]</span></span></p>
+              <p><span class="en">Third Prize, FIREGUIDE intelligent rescue robot project<span class="ph-dash"> —</span> <span class="placeholder">[competition name]</span></span>
+                 <span class="vi" lang="vi">Giải Ba, dự án robot cứu hộ thông minh FIREGUIDE<span class="ph-dash"> —</span> <span class="placeholder">[tên cuộc thi]</span></span></p>
             </div>
             <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
           </li>
@@ -1488,10 +1491,10 @@
           </li>
 
           <!-- Space for future awards: copy this row and fill it in -->
-          <li class="result-placeholder">
+          <li class="result-placeholder ph-only">
             <span class="result-year placeholder">[Year]</span>
             <div class="result-body">
-              <p><span class="en"><span class="placeholder">[Award, competition name and level]</span></span>
+              <p class="ph-only"><span class="en"><span class="placeholder">[Award, competition name and level]</span></span>
                  <span class="vi" lang="vi"><span class="placeholder">[Giải thưởng, tên cuộc thi và cấp độ]</span></span></p>
             </div>
             <span class="tag tag-unknown"><span class="en">[Individual or team]</span><span class="vi" lang="vi">[Cá nhân hoặc nhóm]</span></span>
@@ -1513,14 +1516,14 @@
 
         <div class="contact-grid">
           <!-- Reflections: please write these in your own words -->
-          <div class="reflection reveal">
-            <blockquote>
-              <p>
+          <div class="reflection ph-only reveal">
+            <blockquote class="ph-only">
+              <p class="ph-only">
                 <span class="en"><span class="placeholder">[A short reflection on what you have learned during 2024–2026.]</span></span>
                 <span class="vi" lang="vi"><span class="placeholder">[Một đoạn suy ngẫm ngắn về những điều bạn đã học được trong giai đoạn 2024–2026.]</span></span>
               </p>
             </blockquote>
-            <p>
+            <p class="ph-only">
               <span class="en"><span class="placeholder">[Your goals for the future and what you hope to explore next.]</span></span>
               <span class="vi" lang="vi"><span class="placeholder">[Mục tiêu tương lai và điều bạn muốn khám phá tiếp theo.]</span></span>
             </p>
