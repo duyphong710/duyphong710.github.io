@@ -2621,3 +2621,182 @@ h3 .vi {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ---------- Research highlight (first block of the Research section) ---------- */
+.research-highlight {
+  position: relative;
+  margin-bottom: 8px;
+  padding: 34px 38px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 14px 34px rgba(20, 40, 75, 0.14);
+}
+
+.highlight-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.highlight-label .vi {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.research-highlight p {
+  max-width: 860px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.research-highlight p:last-child {
+  margin-bottom: 0;
+}
+
+.research-highlight .highlight-lead {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  line-height: 1.6;
+}
+
+.research-highlight .vi {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Small uppercase label inside the publication card */
+.pub-mini-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.pub-mini-label .en,
+.pub-mini-label .vi {
+  display: inline;
+}
+
+.pub-mini-label .vi::before {
+  content: " / ";
+}
+
+.pub-mini-label .vi {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Authors with affiliations, one per row */
+.pub-authors-block {
+  margin-bottom: 22px;
+}
+
+.pub-author-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.pub-author-rows li {
+  display: grid;
+  grid-template-columns: minmax(150px, 200px) 1fr;
+  gap: 4px 18px;
+  align-items: baseline;
+}
+
+.pub-author-name {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+strong.pub-author-name {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.pub-affil .en,
+.pub-affil .vi {
+  display: inline;
+}
+
+.pub-affil .vi::before {
+  content: " · ";
+}
+
+.pub-affil {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Four facts: two columns */
+.pub-facts {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Read the publication: button with the DOI line below */
+.pub-read {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.pub-btn {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pub-btn .vi {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.pub-doi-line {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.upcoming-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+@media (max-width: 860px) {
+  .research-highlight {
+    padding: 26px 22px;
+  }
+
+  .research-highlight .highlight-lead {
+    font-size: 1.06rem;
+  }
+
+  .pub-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-author-rows li {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Space between the two overview paragraphs and before "Research areas" */
+.pub-overview {
+  margin-bottom: 26px;
+}
+
+.pub-overview p {
+  margin-bottom: 14px;
+}

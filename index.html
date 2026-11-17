@@ -771,7 +771,7 @@
     </section>
 
     <!-- ===================== 4. RESEARCH & PUBLICATIONS ===================== -->
-    <!-- Order: Featured publication · Research interests · Projects (Praelux, FIREGUIDE) · Skills · Upcoming -->
+    <!-- Order: Research highlight (NTU co-author) · Featured publication · Projects (Praelux, FIREGUIDE) · Skills · Future research -->
     <!-- STRUCTURE
          1. Featured project  (.featured-project) — a large card for the
             project that deserves the most attention. To feature a
@@ -798,17 +798,35 @@
             <span class="vi" lang="vi">Nghiên cứu và công bố khoa học</span>
           </h2>
           <p class="section-intro research-tagline">
-            <span class="en">Exploring ideas, advancing knowledge, and turning curiosity into discovery.</span>
-            <span class="vi" lang="vi">Khám phá ý tưởng, mở rộng tri thức và biến sự tò mò thành khám phá.</span>
+            <span class="en">Exploring ideas. Advancing knowledge. Creating impact.</span>
+            <span class="vi" lang="vi">Khám phá ý tưởng. Mở rộng tri thức. Tạo nên giá trị.</span>
           </p>
         </header>
 
+        <!-- ================= RESEARCH HIGHLIGHT =================
+             Shown first. Wording is factual: Duy Phong is a co-author; one
+             co-author is affiliated with NTU (as listed on the journal page).
+             Do not describe Duy Phong as a member or student of NTU. -->
+        <section class="research-highlight reveal" aria-label="International research collaboration">
+          <p class="highlight-label">
+            <span class="en">International research collaboration</span>
+            <span class="vi" lang="vi">Hợp tác nghiên cứu quốc tế</span>
+          </p>
+          <p class="highlight-lead">
+            <span class="en">I am proud to be a co-author of a published research paper in the Vietnam Journal of Science and Technology, working alongside a co-author affiliated with the School of Computer Science and Data Science at Nanyang Technological University (NTU), Singapore.</span>
+            <span class="vi" lang="vi">Tôi vinh dự được là đồng tác giả của một bài báo khoa học đã xuất bản trên Tạp chí Khoa học và Công nghệ Việt Nam, cùng một đồng tác giả có đơn vị công tác tại Trường Khoa học Máy tính và Dữ liệu, Đại học Công nghệ Nanyang (NTU), Singapore.</span>
+          </p>
+          <p>
+            <span class="en">This research explores keyword-based and semantic search models for Vietnamese online news data, reflecting my growing interest in Artificial Intelligence, Natural Language Processing and Information Retrieval.</span>
+            <span class="vi" lang="vi">Nghiên cứu tập trung vào các mô hình tìm kiếm dựa trên từ khóa và ngữ nghĩa cho dữ liệu báo điện tử tiếng Việt, đồng thời thể hiện mối quan tâm của tôi đối với Trí tuệ Nhân tạo, Xử lý ngôn ngữ tự nhiên và Truy xuất thông tin.</span>
+          </p>
+        </section>
 
         <!-- ================= FEATURED PUBLICATION =================
              Details checked against the journal page:
              https://b.vjst.vn/index.php/ban_b/article/view/3849
-             Keep the author order and the DOI exactly as published. -->
-        <p class="group-label pub-first reveal">
+             Keep the author order, affiliations and the DOI exactly as published. -->
+        <p class="group-label reveal">
           <span class="en">Featured publication</span>
           <span class="vi" lang="vi">Công bố khoa học nổi bật</span>
         </p>
@@ -823,70 +841,79 @@
             <span class="vi" lang="vi">Phân tích so sánh các mô hình tìm kiếm dựa trên từ khóa và ngữ nghĩa cho dữ liệu báo điện tử tiếng Việt</span>
           </h3>
 
-          <!-- Authors in the published order -->
-          <p class="pub-authors">
-            <span class="pub-authors-label"><span class="en">Authors</span><span class="vi" lang="vi">Tác giả</span></span>
-            <span class="pub-author-list">Vu Thao Nguyen · Mai Hoang Bach · <strong>Do Ha Duy Phong</strong></span>
-          </p>
+          <!-- Authors in the published order, with their affiliations -->
+          <div class="pub-authors-block">
+            <p class="pub-mini-label"><span class="en">Authors</span><span class="vi" lang="vi">Tác giả</span></p>
+            <ol class="pub-author-rows">
+              <li>
+                <span class="pub-author-name">Vũ Thảo Nguyên</span>
+                <span class="pub-affil"><span class="en">Nanyang Technological University, Singapore</span><span class="vi" lang="vi">Đại học Công nghệ Nanyang, Singapore</span></span>
+              </li>
+              <li>
+                <span class="pub-author-name">Mai Hoàng Bách</span>
+                <span class="pub-affil"><span class="en">Hanoi-Amsterdam High School</span><span class="vi" lang="vi">Trường THPT Chuyên Hà Nội – Amsterdam</span></span>
+              </li>
+              <li class="pub-author-me">
+                <strong class="pub-author-name">Đỗ Hà Duy Phong</strong>
+                <span class="pub-affil"><span class="en">Yen Hoa High School</span><span class="vi" lang="vi">Trường THPT Yên Hòa</span></span>
+              </li>
+            </ol>
+          </div>
 
           <dl class="pub-facts">
             <div>
-              <dt><span class="en">Publication</span><span class="vi" lang="vi">Tạp chí</span></dt>
+              <dt><span class="en">Journal</span><span class="vi" lang="vi">Tạp chí</span></dt>
               <dd><span class="en">Vietnam Journal of Science and Technology – Series B</span><span class="vi" lang="vi">Tạp chí Khoa học và Công nghệ Việt Nam – Bản B</span></dd>
             </div>
             <div>
-              <dt><span class="en">Published</span><span class="vi" lang="vi">Ngày xuất bản</span></dt>
+              <dt><span class="en">Publication date</span><span class="vi" lang="vi">Ngày xuất bản</span></dt>
               <dd><span class="en">March 27, 2026</span><span class="vi" lang="vi">27/3/2026</span></dd>
             </div>
             <div>
               <dt>DOI</dt>
               <dd><a href="https://doi.org/10.31276/VJST.2026.3849" target="_blank" rel="noopener" class="pub-doi">10.31276/VJST.2026.3849</a></dd>
             </div>
+            <div>
+              <dt><span class="en">Research field</span><span class="vi" lang="vi">Lĩnh vực</span></dt>
+              <dd><span class="en">Computer Science &amp; Information Retrieval</span><span class="vi" lang="vi">Khoa học máy tính &amp; Truy xuất thông tin</span></dd>
+            </div>
           </dl>
-
-          <div class="pub-fields">
-            <span class="pub-fields-label"><span class="en">Research fields</span><span class="vi" lang="vi">Lĩnh vực nghiên cứu</span></span>
-            <ul class="chip-list">
-              <li class="chip">Natural Language Processing (NLP)</li>
-              <li class="chip">Information Retrieval</li>
-              <li class="chip">Semantic Search</li>
-              <li class="chip">Artificial Intelligence</li>
-            </ul>
-          </div>
 
           <!-- Research overview -->
           <div class="pub-overview">
             <h4 class="field-label"><span class="en">Research overview</span><span class="vi" lang="vi">Tổng quan nghiên cứu</span></h4>
             <p>
-              <span class="en">This research explores and compares keyword-based and semantic search approaches for Vietnamese online news data. It examines different information retrieval models, including Boolean Search, TF-IDF, Word2Vec and BERT, alongside BM25 and hybrid search methods. Using Python and Google Colab for experimentation, the study investigates how combining traditional keyword retrieval with semantic models can improve search relevance.</span>
-              <span class="vi" lang="vi">Nghiên cứu tập trung phân tích và so sánh các phương pháp tìm kiếm dựa trên từ khóa và ngữ nghĩa đối với dữ liệu báo điện tử tiếng Việt. Nghiên cứu xem xét các mô hình tìm kiếm khác nhau như Boolean Search, TF-IDF, Word2Vec, BERT, BM25 và phương pháp tìm kiếm lai. Thông qua thực nghiệm bằng Python trên Google Colab, nghiên cứu đánh giá khả năng kết hợp tìm kiếm từ khóa truyền thống với các mô hình ngữ nghĩa nhằm cải thiện mức độ liên quan của kết quả tìm kiếm.</span>
+              <span class="en">This study compares keyword-based and semantic search approaches for Vietnamese online news data. It examines Boolean Search, TF-IDF, Word2Vec, BERT, BM25 and hybrid search models.</span>
+              <span class="vi" lang="vi">Nghiên cứu so sánh các phương pháp tìm kiếm dựa trên từ khóa và ngữ nghĩa đối với dữ liệu báo điện tử tiếng Việt. Các mô hình được xem xét bao gồm Boolean Search, TF-IDF, Word2Vec, BERT, BM25 và tìm kiếm lai.</span>
+            </p>
+            <p>
+              <span class="en">The research uses Python and Google Colab for experimentation, with Vietnamese online news articles from VnExpress as the dataset. It discusses the potential of combining BM25 with BERT/PhoBERT to improve information retrieval performance.</span>
+              <span class="vi" lang="vi">Nghiên cứu sử dụng Python và Google Colab để thực nghiệm trên dữ liệu bài báo điện tử từ VnExpress, đồng thời phân tích tiềm năng kết hợp BM25 với BERT/PhoBERT nhằm nâng cao hiệu quả truy xuất thông tin.</span>
             </p>
           </div>
 
-          <!-- Links: the official article page (button) and the DOI -->
-          <div class="pub-actions">
-            <a href="https://b.vjst.vn/index.php/ban_b/article/view/3849" target="_blank" rel="noopener" class="btn btn-primary">
+          <!-- Research areas as small tags -->
+          <div class="pub-fields">
+            <p class="pub-mini-label"><span class="en">Research areas</span><span class="vi" lang="vi">Lĩnh vực nghiên cứu</span></p>
+            <ul class="chip-list">
+              <li class="chip">Artificial Intelligence (AI)</li>
+              <li class="chip">Natural Language Processing (NLP)</li>
+              <li class="chip">Information Retrieval</li>
+              <li class="chip">Semantic Search</li>
+              <li class="chip">Machine Learning</li>
+            </ul>
+          </div>
+
+          <!-- Read the publication: official article page + DOI below -->
+          <div class="pub-read">
+            <p class="pub-mini-label"><span class="en">Read the publication</span><span class="vi" lang="vi">Đọc bài báo</span></p>
+            <a href="https://b.vjst.vn/index.php/ban_b/article/view/3849" target="_blank" rel="noopener" class="btn btn-primary pub-btn">
               <span class="en">Read full research paper ↗</span>
               <span class="vi" lang="vi">Đọc toàn văn bài báo ↗</span>
             </a>
-            <a href="https://doi.org/10.31276/VJST.2026.3849" target="_blank" rel="noopener" class="pub-doi-link">
-              <span class="en">DOI: https://doi.org/10.31276/VJST.2026.3849</span>
-              <span class="vi" lang="vi">Mã DOI của bài báo</span>
-            </a>
+            <p class="pub-doi-line">DOI: <a href="https://doi.org/10.31276/VJST.2026.3849" target="_blank" rel="noopener" class="pub-doi">https://doi.org/10.31276/VJST.2026.3849</a></p>
           </div>
         </article>
-
-        <!-- ================= RESEARCH INTERESTS ================= -->
-        <p class="group-label reveal">
-          <span class="en">Research interests</span>
-          <span class="vi" lang="vi">Định hướng nghiên cứu</span>
-        </p>
-        <ul class="research-interests reveal">
-          <li><span class="en">Artificial Intelligence</span><span class="vi" lang="vi">Trí tuệ nhân tạo</span></li>
-          <li><span class="en">Machine Learning</span><span class="vi" lang="vi">Học máy</span></li>
-          <li><span class="en">Natural Language Processing</span><span class="vi" lang="vi">Xử lý ngôn ngữ tự nhiên</span></li>
-          <li><span class="en">Computer Science</span><span class="vi" lang="vi">Khoa học máy tính</span></li>
-        </ul>
 
         <!-- ================= PROJECTS ================= -->
         <p class="group-label reveal">
@@ -1149,16 +1176,20 @@
         </div>
 
 
-        <!-- ================= UPCOMING RESEARCH & PROJECTS =================
+        <!-- ================= FUTURE RESEARCH & PROJECTS =================
              Temporary text: replace it when a new project starts. -->
         <aside class="upcoming reveal">
           <p class="group-label">
-            <span class="en">Upcoming research &amp; projects</span>
-            <span class="vi" lang="vi">Nghiên cứu &amp; dự án sắp tới</span>
+            <span class="en">Future research &amp; projects</span>
+            <span class="vi" lang="vi">Nghiên cứu &amp; dự án tiếp theo</span>
+          </p>
+          <p class="upcoming-title">
+            <span class="en">My research journey continues.</span>
+            <span class="vi" lang="vi">Hành trình nghiên cứu của tôi vẫn đang tiếp tục.</span>
           </p>
           <p class="upcoming-text">
-            <span class="en">More research and technology projects coming soon.</span>
-            <span class="vi" lang="vi">Các nghiên cứu và dự án công nghệ tiếp theo sẽ sớm được cập nhật.</span>
+            <span class="en">More research, experiments and technology projects will be added as I continue exploring Computer Science and Artificial Intelligence.</span>
+            <span class="vi" lang="vi">Những nghiên cứu, thử nghiệm và dự án công nghệ mới sẽ được cập nhật trong thời gian tới.</span>
           </p>
         </aside>
 
