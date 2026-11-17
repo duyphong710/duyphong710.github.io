@@ -2390,3 +2390,234 @@ h3 .vi {
 .hide-empty .contact-grid:has(> .ph-only) {
   grid-template-columns: minmax(0, 560px);
 }
+
+/* =====================================================================
+   RESEARCH & PUBLICATIONS
+   ===================================================================== */
+
+/* Tagline under the section title */
+.research-tagline {
+  max-width: 640px;
+  letter-spacing: 0;
+  font-size: 1.05rem;
+}
+
+/* First label right after the section header: no extra top space */
+.group-label.pub-first {
+  margin-top: 0;
+}
+
+/* Featured publication card (same look as the featured project card) */
+.publication-card {
+  padding: 40px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--navy);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(20, 40, 75, 0.06);
+}
+
+.pub-title {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  line-height: 1.3;
+  margin: 6px 0 22px;
+}
+
+.pub-title .vi {
+  font-size: 0.72em;
+  font-weight: 500;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* Authors line */
+.pub-authors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin-bottom: 22px;
+  font-size: 1rem;
+}
+
+.pub-authors-label,
+.pub-fields-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.pub-authors-label .en,
+.pub-authors-label .vi,
+.pub-fields-label .en,
+.pub-fields-label .vi {
+  display: inline;
+}
+
+.pub-authors-label .vi::before,
+.pub-fields-label .vi::before {
+  content: " / ";
+}
+
+.pub-authors-label .vi,
+.pub-fields-label .vi {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.pub-author-list strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* Journal · date · DOI in three columns */
+.pub-facts {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.3fr;
+  gap: 18px 28px;
+  padding: 20px 0;
+  margin-bottom: 22px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.pub-facts dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.pub-facts dt .vi {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.pub-facts dd {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.pub-doi,
+.pub-doi-link {
+  color: var(--navy-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+}
+
+/* Research fields as small chips */
+.pub-fields {
+  margin-bottom: 26px;
+}
+
+.chip-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.chip {
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  color: var(--navy);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.pub-overview p {
+  line-height: 1.7;
+}
+
+/* Button + DOI link */
+.pub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  margin-top: 28px;
+}
+
+.pub-doi-link {
+  font-size: 0.9rem;
+}
+
+/* Research interests: four simple tiles */
+.research-interests {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.research-interests li {
+  padding: 20px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--navy);
+  border-radius: var(--radius);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.research-interests li .vi {
+  margin-top: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* Only one project card left in the grid: use the full width */
+.projects-grid:has(> .project-card:only-of-type) {
+  grid-template-columns: 1fr;
+}
+
+/* "Upcoming research & projects": a light dashed box */
+.upcoming {
+  margin-top: 64px;
+  padding: 26px 28px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.upcoming .group-label {
+  margin: 0 0 8px;
+}
+
+.upcoming-text {
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Tablets and phones */
+@media (max-width: 860px) {
+  .publication-card {
+    padding: 26px 20px;
+  }
+
+  .pub-facts {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .research-interests {
+    grid-template-columns: 1fr 1fr;
+  }
+}
