@@ -1812,6 +1812,15 @@ h3 .vi {
   line-height: 1.35;
 }
 
+/* Photo source link inside a caption (e.g. the school's official page) */
+.award-cert figcaption a,
+.result-cert figcaption a {
+  color: var(--navy-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-word;
+}
+
 /* The empty row for future awards looks lighter */
 .result-placeholder {
   background: var(--paper);
