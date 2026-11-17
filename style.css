@@ -2285,3 +2285,35 @@ h3 .vi {
     text-align: center;
   }
 }
+
+/* Award card photo shown at its own shape (not boxed to 4:3) */
+.photo-natural img {
+  aspect-ratio: auto;
+}
+
+.photo-natural figcaption a {
+  color: var(--navy-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Small heading above the "Award Details" list */
+.award-facts-label {
+  margin: 22px 0 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.award-facts-label .vi {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Space between two award cards placed one after another */
+.award-secondary + .group-label {
+  margin-top: 40px;
+}
