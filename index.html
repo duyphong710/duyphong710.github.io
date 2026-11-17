@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  Do Ha Duy Phong — Academic Portfolio
+  ============================================================
+  HOW THIS PAGE IS ORGANISED
+  - <header> holds the top navigation bar.
+  - <main> holds the 6 sections, each with an id (home, about,
+    journey, research, awards, contact). The nav links jump to those ids.
+  - <footer> holds the copyright line.
+
+  HOW THE BILINGUAL TEXT WORKS
+  Every piece of text is written twice: English first, then
+  Vietnamese directly below it:
+      <span class="en">English text</span>
+      <span class="vi" lang="vi">Văn bản tiếng Việt</span>
+  style.css shows the Vietnamese line underneath, slightly smaller
+  and in a softer colour. lang="vi" helps screen readers pronounce
+  the Vietnamese correctly.
+
+  INDIVIDUAL vs TEAM AWARDS
+  In the Journey section every award has a small label:
+    tag-individual → an award Duy Phong received individually
+    tag-team       → an award given to a team project he was part of
+    tag-unknown    → not yet confirmed (please check and update)
+
+  HOW TO EDIT PLACEHOLDERS
+  Anything shown in [square brackets] with a dashed underline is a
+  placeholder (class="placeholder"). Replace the text with real
+  information and remove class="placeholder" when you are done.
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do Ha Duy Phong — Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio of Do Ha Duy Phong, Grade 12 student at Yen Hoa High School, Hanoi, Vietnam." />
+
+  <!-- Google Fonts: Lora (headings) and Be Vietnam Pro (body).
+       Both fonts fully support Vietnamese accents. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Our own stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== HEADER / NAVIGATION ===================== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <!-- Site name / logo (links back to the top) -->
+      <a href="#home" class="nav-logo">Duy Phong</a>
+
+      <!-- Hamburger button: only visible on small screens (see style.css) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Navigation links (English on top, Vietnamese below) -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link"><span class="en">Home</span><span class="vi" lang="vi">Trang chủ</span></a></li>
+        <li><a href="#about" class="nav-link"><span class="en">About</span><span class="vi" lang="vi">Giới thiệu</span></a></li>
+        <li><a href="#journey" class="nav-link"><span class="en">Journey</span><span class="vi" lang="vi">Hành trình</span></a></li>
+        <li><a href="#research" class="nav-link"><span class="en">Research</span><span class="vi" lang="vi">Nghiên cứu</span></a></li>
+        <li><a href="#awards" class="nav-link"><span class="en">Awards</span><span class="vi" lang="vi">Giải thưởng</span></a></li>
+        <li><a href="#contact" class="nav-link"><span class="en">Contact</span><span class="vi" lang="vi">Liên hệ</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== 1. HOME ===================== -->
+    <section id="home" class="hero">
+      <!-- Two columns: text on the left, photo on the right
+           (on phones the photo moves above the text — see style.css) -->
+      <div class="container hero-grid">
+      <div class="hero-inner">
+        <p class="eyebrow">
+          <span class="en">Academic Portfolio</span>
+          <span class="vi" lang="vi">Hồ sơ học thuật</span>
+        </p>
+
+        <!-- Name written as provided. Add Vietnamese diacritics here if you wish. -->
+        <h1 class="hero-title">Do Ha Duy Phong</h1>
+
+        <p class="hero-subtitle">
+          <span class="en">Grade 12 student · Yen Hoa High School, Hanoi, Vietnam</span>
+          <span class="vi" lang="vi">Học sinh lớp 12 · Trường THPT Yên Hòa, Hà Nội, Việt Nam</span>
+        </p>
+
+        <!-- Short introduction: a one-line statement, then a short paragraph -->
+        <p class="hero-lead">
+          <span class="en">A curious mind, a passion for technology, and a commitment to solving real-world problems.</span>
+          <span class="vi" lang="vi">Một tư duy ham học hỏi, niềm đam mê công nghệ và mong muốn giải quyết những vấn đề thực tế.</span>
+        </p>
+        <p class="hero-intro">
+          <span class="en">I am interested in Computer Science and Artificial Intelligence, exploring how technology can be transformed into practical solutions that make a meaningful difference.</span>
+          <span class="vi" lang="vi">Tôi quan tâm đến Khoa học máy tính và Trí tuệ nhân tạo, đồng thời tìm hiểu cách biến công nghệ thành những giải pháp thiết thực có ích cho cộng đồng.</span>
+        </p>
+
+        <div class="hero-actions">
+          <a href="#journey" class="btn btn-primary">
+            <span class="en">View my journey</span>
+            <span class="vi" lang="vi">Xem hành trình</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span class="en">Get in touch</span>
+            <span class="vi" lang="vi">Liên hệ</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero photo (original, unedited file in the "images" folder).
+           The crop — which part of the photo stays visible — is done only
+           with CSS in style.css (.hero-photo img). The file itself is unchanged. -->
+      <figure class="hero-photo">
+        <div class="hero-photo-frame">
+          <img
+            src="images/duy-phong-sydney-opera-house.jpg"
+            alt="Do Ha Duy Phong in front of the Sydney Opera House and Sydney Harbour Bridge"
+            width="864" height="1158"
+          />
+        </div>
+      </figure>
+      </div>
+    </section>
+
+    <!-- ===================== 2. ABOUT ME ===================== -->
+    <!-- Five short subsections:
+           1. Who I Am                       (with photo, scores and personal details)
+           2. What I Am Curious About        (three cards)
+           3. How I Learn and Grow           (list of five ways of learning)
+           4. My Aspirations  +  5. The Value I Hope to Create  (side by side)
+         Text in [square brackets] is a placeholder for Duy Phong's own words. -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-number">01</span>
+          <h2>
+            <span class="en">About Me</span>
+            <span class="vi" lang="vi">Giới thiệu bản thân</span>
+          </h2>
+        </header>
+
+        <!-- ---------- 2.1 Who I Am ---------- -->
+        <div class="about-grid">
+          <!-- Portrait photo (original file, shown whole in its own 2:3 shape) -->
+          <img src="images/duy-phong-portrait.jpg" width="683" height="1024"
+               alt="Portrait of Do Ha Duy Phong"
+               class="about-photo about-portrait reveal" />
+
+          <div class="about-text reveal">
+            <h3 class="sub-heading">
+              <span class="en">Who I Am</span>
+              <span class="vi" lang="vi">Tôi là ai?</span>
+            </h3>
+            <p>
+              <span class="en">I am a Grade 12 student at Yen Hoa High School in Hanoi, Vietnam. I am interested in Computer Science, Artificial Intelligence and technology research.</span>
+              <span class="vi" lang="vi">Tôi là học sinh lớp 12 Trường THPT Yên Hòa, Hà Nội, Việt Nam. Tôi quan tâm đến Khoa học máy tính, Trí tuệ nhân tạo và nghiên cứu công nghệ.</span>
+            </p>
+            <p>
+              <span class="en"><span class="placeholder">[In your own words: how you became interested in these fields.]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Bằng lời của bạn: điều gì khiến bạn quan tâm đến các lĩnh vực này.]</span></span>
+            </p>
+
+            <!-- Academic results -->
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-value">9.1<small>/10</small></span>
+                <span class="stat-label"><span class="en">GPA</span><span class="vi" lang="vi">Điểm trung bình</span></span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">7.5</span>
+                <span class="stat-label"><span class="en">IELTS</span><span class="vi" lang="vi">IELTS</span></span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">1520</span>
+                <span class="stat-label"><span class="en">SAT</span><span class="vi" lang="vi">SAT</span></span>
+              </div>
+            </div>
+
+            <!-- Quick facts list -->
+            <dl class="facts">
+              <div class="fact">
+                <dt><span class="en">School</span><span class="vi" lang="vi">Trường</span></dt>
+                <dd><span class="en">Yen Hoa High School</span><span class="vi" lang="vi">Trường THPT Yên Hòa</span></dd>
+              </div>
+              <div class="fact">
+                <dt><span class="en">Current grade</span><span class="vi" lang="vi">Lớp hiện tại</span></dt>
+                <dd><span class="en">Grade 12 (2026)</span><span class="vi" lang="vi">Lớp 12 (2026)</span></dd>
+              </div>
+              <!-- Only the year is shown, not the full date of birth -->
+              <div class="fact">
+                <dt><span class="en">Year of birth</span><span class="vi" lang="vi">Năm sinh</span></dt>
+                <dd>2009</dd>
+              </div>
+              <div class="fact">
+                <dt><span class="en">Location</span><span class="vi" lang="vi">Nơi sống</span></dt>
+                <dd><span class="en">Hanoi, Vietnam</span><span class="vi" lang="vi">Hà Nội, Việt Nam</span></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- ---------- 2.2 What I Am Curious About ---------- -->
+        <div class="about-block">
+          <h3 class="sub-heading reveal">
+            <span class="en">What I Am Curious About</span>
+            <span class="vi" lang="vi">Những điều tôi quan tâm</span>
+          </h3>
+
+          <div class="interest-grid">
+            <article class="interest-card reveal">
+              <span class="interest-number">01</span>
+              <h4>
+                <span class="en">Computer Science and Software Development</span>
+                <span class="vi" lang="vi">Khoa học máy tính và Phát triển phần mềm</span>
+              </h4>
+              <p>
+                <span class="en">How algorithms and well-structured code turn ideas into software that works.</span>
+                <span class="vi" lang="vi">Cách thuật toán và mã nguồn được tổ chức tốt biến ý tưởng thành phần mềm hoạt động được.</span>
+              </p>
+            </article>
+
+            <article class="interest-card reveal">
+              <span class="interest-number">02</span>
+              <h4>
+                <span class="en">Artificial Intelligence and Machine Learning</span>
+                <span class="vi" lang="vi">Trí tuệ nhân tạo và Học máy</span>
+              </h4>
+              <p>
+                <span class="en">How computers learn patterns from data, and how these methods can be used in practice.</span>
+                <span class="vi" lang="vi">Cách máy tính học các quy luật từ dữ liệu và cách áp dụng những phương pháp này vào thực tế.</span>
+              </p>
+            </article>
+
+            <article class="interest-card reveal">
+              <span class="interest-number">03</span>
+              <h4>
+                <span class="en">Technology for Real-world Problems</span>
+                <span class="vi" lang="vi">Công nghệ cho các vấn đề thực tế</span>
+              </h4>
+              <p>
+                <span class="en">How technology can help with practical challenges that people face in daily life.</span>
+                <span class="vi" lang="vi">Cách công nghệ có thể hỗ trợ giải quyết những thách thức thực tế mà mọi người gặp phải trong cuộc sống hằng ngày.</span>
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- ---------- 2.3 How I Learn and Grow ---------- -->
+        <div class="about-block">
+          <h3 class="sub-heading reveal">
+            <span class="en">How I Learn and Grow</span>
+            <span class="vi" lang="vi">Cách tôi học hỏi và trưởng thành</span>
+          </h3>
+
+          <p class="about-lead reveal">
+            <span class="en">I learn in several different ways, both in and outside the classroom:</span>
+            <span class="vi" lang="vi">Tôi học hỏi theo nhiều cách khác nhau, cả trong và ngoài lớp học:</span>
+          </p>
+
+          <!-- Each row: a way of learning (left) and a short description (right) -->
+          <ul class="learn-list reveal">
+            <li>
+              <span class="learn-title"><span class="en">Academic challenges</span><span class="vi" lang="vi">Thử thách học thuật</span></span>
+              <span class="learn-text"><span class="en">Working through difficult problems in my studies.</span><span class="vi" lang="vi">Giải quyết những bài toán khó trong quá trình học tập.</span></span>
+            </li>
+            <li>
+              <span class="learn-title"><span class="en">Research</span><span class="vi" lang="vi">Nghiên cứu</span></span>
+              <span class="learn-text"><span class="en">Asking questions, testing ideas and comparing results.</span><span class="vi" lang="vi">Đặt câu hỏi, thử nghiệm ý tưởng và so sánh kết quả.</span></span>
+            </li>
+            <li>
+              <span class="learn-title"><span class="en">Teamwork</span><span class="vi" lang="vi">Làm việc nhóm</span></span>
+              <span class="learn-text"><span class="en">Working with others and sharing responsibilities in team projects.</span><span class="vi" lang="vi">Làm việc cùng người khác và chia sẻ trách nhiệm trong các dự án nhóm.</span></span>
+            </li>
+            <li>
+              <span class="learn-title"><span class="en">Competitions</span><span class="vi" lang="vi">Cuộc thi</span></span>
+              <span class="learn-text"><span class="en">Preparing for and taking part in academic and technology competitions.</span><span class="vi" lang="vi">Chuẩn bị và tham gia các cuộc thi học thuật và công nghệ.</span></span>
+            </li>
+            <li>
+              <span class="learn-title"><span class="en">Practical projects</span><span class="vi" lang="vi">Dự án thực tế</span></span>
+              <span class="learn-text"><span class="en">Building things and seeing how ideas work outside the classroom.</span><span class="vi" lang="vi">Xây dựng sản phẩm và kiểm chứng ý tưởng bên ngoài lớp học.</span></span>
+            </li>
+          </ul>
+
+          <p class="about-note reveal">
+            <span class="en"><span class="placeholder">[A short example in your own words: something one of these experiences taught you.]</span></span>
+            <span class="vi" lang="vi"><span class="placeholder">[Một ví dụ ngắn bằng lời của bạn: điều bạn học được từ một trong những trải nghiệm này.]</span></span>
+          </p>
+        </div>
+
+        <!-- ---------- 2.4 My Aspirations  +  2.5 The Value I Hope to Create ---------- -->
+        <div class="about-block about-two-col">
+          <div class="reveal">
+            <h3 class="sub-heading">
+              <span class="en">My Aspirations</span>
+              <span class="vi" lang="vi">Định hướng tương lai</span>
+            </h3>
+            <p>
+              <span class="en">I am interested in studying Computer Science and in exploring how technology can address meaningful real-world challenges.</span>
+              <span class="vi" lang="vi">Tôi mong muốn theo học ngành Khoa học máy tính và tìm hiểu cách công nghệ có thể góp phần giải quyết những thách thức có ý nghĩa trong thực tế.</span>
+            </p>
+            <p>
+              <span class="en"><span class="placeholder">[Specific fields or questions you would like to explore further.]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Những lĩnh vực hoặc câu hỏi cụ thể bạn muốn tìm hiểu sâu hơn.]</span></span>
+            </p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="sub-heading">
+              <span class="en">The Value I Hope to Create</span>
+              <span class="vi" lang="vi">Giá trị tôi mong muốn đóng góp</span>
+            </h3>
+            <p>
+              <span class="en">I hope to use technical knowledge, research and collaboration to develop solutions that are useful to society.</span>
+              <span class="vi" lang="vi">Tôi mong muốn vận dụng kiến thức kỹ thuật, nghiên cứu và sự hợp tác để phát triển những giải pháp hữu ích cho xã hội.</span>
+            </p>
+            <p>
+              <span class="en"><span class="placeholder">[An area or community you would most like to contribute to.]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Lĩnh vực hoặc cộng đồng bạn muốn đóng góp nhiều nhất.]</span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. MY JOURNEY (TIMELINE) ===================== -->
+    <!-- Each <li class="timeline-item"> is one school year.
+         Each <li class="award"> inside it is one award or activity. -->
+    <section id="journey" class="section section-tinted">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-number">02</span>
+          <h2>
+            <span class="en">My Journey</span>
+            <span class="vi" lang="vi">Hành trình của tôi</span>
+          </h2>
+          <p class="section-intro">2024 – 2026</p>
+        </header>
+
+        <!-- ================= PERSONAL REFLECTION =================
+             Vietnamese text: Duy Phong's own words, inserted verbatim.
+             English text: translation of the same paragraphs.
+             Each paragraph: English first, Vietnamese directly below. -->
+        <article class="story reveal">
+          <p class="story-kicker">
+            <span class="en">Personal reflection</span>
+            <span class="vi" lang="vi">Suy ngẫm cá nhân</span>
+          </p>
+          <h3 class="story-title">
+            <span class="en">The Decision to Study Abroad – A Turning Point and a Journey of Determination</span>
+            <span class="vi" lang="vi">Quyết định Du Học – Bước ngoặt và hành trình nỗ lực</span>
+          </h3>
+
+          <!-- Light highlight: a phrase quoted from the last paragraph -->
+          <blockquote class="story-quote">
+            <span class="en">“A late start does not limit what I can achieve.”</span>
+            <span class="vi" lang="vi">“Một khởi đầu muộn không giới hạn những gì mình có thể đạt được.”</span>
+          </blockquote>
+
+          <div class="story-body">
+            <p>
+              <span class="en">I only made a real decision to pursue studying abroad in the second semester of Grade 11. That meant I had considerably less time to prepare my application, take part in academic competitions and complete the certificates I needed. While many students begin building their profiles in Grade 10, I had to reach most of these goals in roughly a third of the usual timeline.</span>
+              <span class="vi" lang="vi">Tôi chỉ thực sự đưa ra quyết định theo đuổi con đường du học từ học kỳ II năm lớp 11. Điều đó đồng nghĩa với việc tôi có ít thời gian hơn đáng kể để chuẩn bị hồ sơ, tham gia các cuộc thi học thuật và hoàn thiện những chứng chỉ cần thiết. Trong khi nhiều học sinh thường bắt đầu xây dựng hồ sơ từ năm lớp 10, tôi phải hoàn thành phần lớn những mục tiêu này trong một khoảng thời gian chỉ bằng khoảng một phần ba lộ trình thông thường.</span>
+            </p>
+            <p>
+              <span class="en">It was not a small challenge. I had to set my goals quickly, make a plan and prioritise many tasks at once, while still keeping up with my classes and school activities as a Grade 12 student. The process asked me to be fully focused, to take more initiative, and to be more disciplined in how I used my time.</span>
+              <span class="vi" lang="vi">Đây là một thử thách không nhỏ. Tôi phải nhanh chóng xác định mục tiêu, xây dựng kế hoạch và sắp xếp thứ tự ưu tiên cho nhiều công việc cùng lúc, đồng thời vẫn đảm bảo việc học tập trên lớp và các hoạt động ở trường của 1 học sinh lớp 12. Quá trình đó đòi hỏi tôi phải tập trung hoàn toàn, chủ động và kỷ luật hơn trong cách sử dụng thời gian.</span>
+            </p>
+            <!-- Photos (original files, shown whole, nothing cropped) -->
+            <div class="story-photos story-photos-equal">
+              <figure class="story-photo">
+                <img src="images/journey-research-presentation.jpg" width="2000" height="1500" loading="lazy" alt="Duy Phong presenting research results with an ensemble model diagram and a results table to teachers and students at school" />
+                <figcaption>
+                  <span class="en">Presenting a research project at school</span>
+                  <span class="vi" lang="vi">Trình bày đề tài nghiên cứu tại trường</span>
+                </figcaption>
+              </figure>
+              <figure class="story-photo">
+                <img src="images/journey-engineering-lab.jpg" width="2000" height="1500" loading="lazy" alt="Duy Phong wiring a motor control training board in an electrical engineering lab" />
+                <figcaption>
+                  <span class="en">Hands-on practice in an electrical engineering lab</span>
+                  <span class="vi" lang="vi">Thực hành trong phòng thí nghiệm điện – tự động hoá</span>
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              <span class="en">Although the preparation time was tight, I tried to make the most of every opportunity to learn, to test myself and to gain experience. I value the results from this period, but perhaps the greater value lies in what the journey itself taught me: adapting to change, managing several goals at the same time, and staying committed to the plans I had set.</span>
+              <span class="vi" lang="vi">Dù thời gian chuẩn bị khá gấp rút, tôi đã cố gắng tận dụng từng cơ hội để học hỏi, thử sức và tích lũy kinh nghiệm. Những kết quả đạt được trong giai đoạn này là điều tôi trân trọng, nhưng có lẽ giá trị lớn hơn nằm ở những gì tôi học được từ chính hành trình đó: khả năng thích nghi trước những thay đổi, quản lý nhiều mục tiêu song song và kiên trì theo đuổi kế hoạch đã đặt ra.</span>
+            </p>
+            <div class="story-photos story-photos-mixed">
+              <figure class="story-photo">
+                <img src="images/journey-robot-team.jpg" width="1500" height="2000" loading="lazy" alt="Duy Phong and three teammates testing a yellow tracked robot with a laptop" />
+                <figcaption>
+                  <span class="en">Testing a robot with teammates</span>
+                  <span class="vi" lang="vi">Thử nghiệm robot cùng các bạn trong nhóm</span>
+                </figcaption>
+              </figure>
+              <figure class="story-photo">
+                <img src="images/journey-office.jpg" width="1280" height="960" loading="lazy" alt="Duy Phong working at a computer in an open-plan office" />
+                <figcaption>
+                  <span class="en">Working in an office setting</span>
+                  <span class="vi" lang="vi">Làm việc trong môi trường văn phòng</span>
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              <span class="en">Looking back, I understand that a late start does not limit what I can achieve. What matters is knowing where I want to go, focusing on what needs to be done, and giving my best in the time I have. The results we receive will always reflect the effort we put in.</span>
+              <span class="vi" lang="vi">Nhìn lại, tôi hiểu rằng một khởi đầu muộn không giới hạn những gì mình có thể đạt được. Điều quan trọng là biết mình muốn đi đâu, tập trung vào những việc cần làm và nỗ lực hết khả năng trong khoảng thời gian mình có. Kết quả nhận được sẽ luôn xứng đáng với những nỗ lực mình đã bỏ ra</span>
+            </p>
+            <div class="story-photos">
+              <figure class="story-photo">
+                <img src="images/icoa-2026-ceremony.jpg" width="2000" height="1333" loading="lazy" alt="Duy Phong receiving his ICOA 2026 Silver Medal certificate on stage in Sydney" />
+                <figcaption>
+                  <span class="en">Receiving the ICOA 2026 Silver Medal certificate in Sydney</span>
+                  <span class="vi" lang="vi">Nhận giấy chứng nhận Huy chương Bạc ICOA 2026 tại Sydney</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= TIMELINE 2024 – 2026 ================= -->
+        <p class="group-label timeline-label reveal">
+          <span class="en">Timeline 2024 – 2026</span>
+          <span class="vi" lang="vi">Dòng thời gian 2024 – 2026</span>
+        </p>
+
+        <!-- Legend explaining the labels -->
+        <ul class="legend reveal">
+          <li><span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+            <span class="legend-text"><span class="en">Award received individually</span><span class="vi" lang="vi">Giải thưởng cá nhân</span></span></li>
+          <li><span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+            <span class="legend-text"><span class="en">Shared by the project team</span><span class="vi" lang="vi">Thành tích chung của cả nhóm dự án</span></span></li>
+        </ul>
+
+        <ol class="timeline">
+          <!-- 2024 · Grade 10 -->
+          <li class="timeline-item reveal">
+            <span class="timeline-year">2024</span>
+            <div class="timeline-card">
+              <p class="stage-grade"><span class="en">Grade 10</span><span class="vi" lang="vi">Lớp 10</span></p>
+              <h3><span class="en">Building Foundations</span><span class="vi" lang="vi">Xây dựng nền tảng</span></h3>
+              <!-- Milestone story: "Hello, Yen Hoa!" (text provided by Duy Phong, used as written).
+                   PHOTO: images/thcs-graduation-certificate-2024.jpg (version with the
+                   day/month of birth and the diploma number covered). -->
+              <article class="milestone-story">
+                <h4 class="milestone-title">
+                  <span class="en">2024 – Hello, Yen Hoa! Here I Come!</span>
+                  <span class="vi" lang="vi">2024 – Chào Yên Hòa, mình đến đây!</span>
+                </h4>
+                <p class="milestone-subtitle">
+                  <span class="en">A New Chapter Begins – A Journey from Achievement to New Aspirations</span>
+                  <span class="vi" lang="vi">Một chương mới bắt đầu – Từ thành quả hôm nay đến những mục tiêu mới</span>
+                </p>
+
+                <div class="milestone-body">
+                  <p>
+                    <span class="en">2024 marked an important turning point in my academic journey.</span>
+                    <span class="vi" lang="vi">Năm 2024 đánh dấu một bước ngoặt quan trọng trong hành trình học tập của tôi.</span>
+                  </p>
+                  <p>
+                    <span class="en">I graduated from Doan Thi Diem Secondary School with an Excellent Graduation Classification, bringing my lower secondary school years to a meaningful close.</span>
+                    <span class="vi" lang="vi">Tôi hoàn thành chương trình trung học cơ sở tại Trường THCS Đoàn Thị Điểm với xếp loại tốt nghiệp Giỏi, khép lại những năm tháng học tập ở bậc THCS bằng một kết quả đáng tự hào.</span>
+                  </p>
+                  <!-- Lower secondary graduation certificate (personal details already covered by Duy Phong) -->
+                  <figure class="milestone-photo">
+                    <img src="images/thcs-graduation-certificate-2024.jpg" width="2011" height="1376" loading="lazy"
+                         alt="Lower secondary school graduation certificate of Do Ha Duy Phong, Doan Thi Diem Secondary School, 2024, classification Excellent" />
+                    <figcaption>
+                      <span class="en">Lower secondary graduation certificate – Doan Thi Diem Secondary School, 2024 (Excellent)</span>
+                      <span class="vi" lang="vi">Bằng tốt nghiệp THCS – Trường THCS Đoàn Thị Điểm, năm 2024 (xếp loại Giỏi)</span>
+                    </figcaption>
+                  </figure>
+                  <p>
+                    <span class="en">That summer, I took Hanoi’s highly competitive Grade 10 public high school entrance examination and achieved 45.50 out of 50 points.</span>
+                    <span class="vi" lang="vi">Mùa hè năm ấy, tôi tham gia kỳ thi tuyển sinh vào lớp 10 THPT công lập tại Hà Nội và đạt 45,50/50 điểm.</span>
+                  </p>
+                  <p>
+                    <span class="en">My results across the three subjects were:</span>
+                    <span class="vi" lang="vi">Kết quả cụ thể của ba môn thi:</span>
+                  </p>
+                  <ul class="score-list">
+                    <li>
+                      <span class="score-value">9.50<small>/10</small></span>
+                      <span class="score-label"><span class="en">Mathematics: 9.50/10</span><span class="vi" lang="vi">Toán: 9,50/10 điểm</span></span>
+                    </li>
+                    <li>
+                      <span class="score-value">10.00<small>/10</small></span>
+                      <span class="score-label"><span class="en">English: 10.00/10</span><span class="vi" lang="vi">Tiếng Anh: 10,00/10 điểm</span></span>
+                    </li>
+                    <li>
+                      <span class="score-value">8.25<small>/10</small></span>
+                      <span class="score-label"><span class="en">Literature: 8.25/10</span><span class="vi" lang="vi">Ngữ văn: 8,25/10 điểm</span></span>
+                    </li>
+                  </ul>
+                  <p>
+                    <span class="en">More than 105,000 candidates participated in Hanoi’s 2024 entrance examination. According to statistics published after the examination, 1,925 candidates achieved 45 points or above. With my score of 45.50, I was among this high-scoring group, representing approximately the top 2% of candidates.</span>
+                    <span class="vi" lang="vi">Trong kỳ thi năm 2024, Hà Nội có hơn 105.000 thí sinh tham dự. Theo thống kê được công bố sau kỳ thi, có 1.925 thí sinh đạt từ 45 điểm trở lên. Với kết quả 45,50 điểm, tôi nằm trong nhóm thí sinh có điểm số cao này, tương đương khoảng top 2% thí sinh có điểm xét tuyển cao nhất toàn thành phố.</span>
+                  </p>
+                  <p>
+                    <span class="en">I was admitted to Yen Hoa High School through my first-choice preference. With an initial admission cutoff of 42.50 points, one of the highest in Hanoi that year, my result exceeded the school’s cutoff by 3 points.</span>
+                    <span class="vi" lang="vi">Tôi trúng tuyển Trường THPT Yên Hòa với nguyện vọng 1. Năm đó, điểm chuẩn ban đầu của trường là 42,50 điểm, thuộc nhóm cao nhất Hà Nội. Kết quả của tôi cao hơn điểm chuẩn của trường 3 điểm.</span>
+                  </p>
+                  <p>
+                    <span class="en">Looking back, this achievement was more than just a successful entrance examination. It was the beginning of a new chapter, bringing new challenges, opportunities, and ambitions.</span>
+                    <span class="vi" lang="vi">Nhìn lại, đây không chỉ là thành quả của một kỳ thi tuyển sinh, mà còn là khởi đầu cho một chặng đường mới với nhiều thử thách, cơ hội và mục tiêu lớn hơn.</span>
+                  </p>
+                  <p>
+                    <span class="en">I was ready to step into Yen Hoa, continue learning, explore my interests, and discover how far I could go.</span>
+                    <span class="vi" lang="vi">Tôi đã sẵn sàng bước vào Yên Hòa, tiếp tục học hỏi, khám phá những lĩnh vực mình yêu thích và thử sức với những giới hạn mới của bản thân.</span>
+                  </p>
+                  <p class="milestone-closing">
+                    <span class="en">Hello, Yen Hoa! Here I come!</span>
+                    <span class="vi" lang="vi">Chào Yên Hòa, mình đến đây!</span>
+                  </p>
+                </div>
+
+                <p class="milestone-meta">
+                  <span class="en">2024 | Grade 10 | Yen Hoa High School | Hanoi, Vietnam</span>
+                  <span class="vi" lang="vi">2024 | Lớp 10 | Trường THPT Yên Hòa | Hà Nội, Việt Nam</span>
+                </p>
+              </article>
+
+              <ul class="award-list">
+                <li class="award">
+                  <span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+                  <p><span class="en">First Prize in Informatics, Excellent Student Competition for Grades 10–11, Thanh Xuan – Cau Giay High School Cluster (school year 2024–2025)</span>
+                     <span class="vi" lang="vi">Giải Nhất môn Tin học, Kỳ thi Học sinh giỏi các môn văn hoá lớp 10, lớp 11 Cụm trường THPT Thanh Xuân – Cầu Giấy, năm học 2024–2025</span></p>
+                  <figure class="award-cert">
+                    <a href="images/hsg-tin-hoc-cum-2024-2025.jpg" target="_blank" rel="noopener">
+                      <img src="images/hsg-tin-hoc-cum-2024-2025.jpg" width="1168" height="784" loading="lazy" alt="Certificate for First Prize in Informatics awarded to Do Ha Duy Phong, class 10A3, Yen Hoa High School, Thanh Xuan – Cau Giay cluster, school year 2024–2025" />
+                    </a>
+                    <figcaption>
+                      <span class="en">Certificate, 24 March 2025</span>
+                      <span class="vi" lang="vi">Giấy chứng nhận, ngày 24/3/2025</span>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- 2025 · Grade 11 -->
+          <li class="timeline-item reveal">
+            <span class="timeline-year">2025</span>
+            <div class="timeline-card">
+              <p class="stage-grade"><span class="en">Grade 11</span><span class="vi" lang="vi">Lớp 11</span></p>
+              <h3><span class="en">Exploring and Preparing</span><span class="vi" lang="vi">Khám phá và chuẩn bị</span></h3>
+              <ul class="award-list">
+                <li class="award">
+                  <span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+                  <p><span class="en">Second Prize in Informatics, Excellent Student Competition for Grades 10–11, High School Cluster No. 4 (school year 2025–2026)</span>
+                     <span class="vi" lang="vi">Giải Nhì môn Tin học, Kỳ thi Học sinh giỏi các môn văn hoá lớp 10, lớp 11 Cụm trường THPT số 04, năm học 2025–2026</span></p>
+                  <figure class="award-cert">
+                    <a href="images/hsg-tin-hoc-cum-2025-2026.jpg" target="_blank" rel="noopener">
+                      <img src="images/hsg-tin-hoc-cum-2025-2026.jpg" width="1152" height="800" loading="lazy" alt="Certificate for Second Prize in Informatics awarded to Do Ha Duy Phong, class 11A3, Yen Hoa High School, High School Cluster No. 4, school year 2025–2026" />
+                    </a>
+                    <figcaption>
+                      <span class="en">Certificate, 24 March 2026</span>
+                      <span class="vi" lang="vi">Giấy chứng nhận, ngày 24/3/2026</span>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="award">
+                  <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+                  <p><span class="en">Participated in Praelux, an AI anti-scam project</span>
+                     <span class="vi" lang="vi">Tham gia Praelux, dự án AI chống lừa đảo</span></p>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- 2026 · Grade 12 -->
+          <li class="timeline-item reveal">
+            <span class="timeline-year">2026</span>
+            <div class="timeline-card">
+              <p class="stage-grade"><span class="en">Grade 12</span><span class="vi" lang="vi">Lớp 12</span></p>
+              <h3><span class="en">Taking Action</span><span class="vi" lang="vi">Bắt tay hành động</span></h3>
+              <ul class="award-list">
+                <li class="award">
+                  <span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+                  <p><span class="en">First Prize, Hanoi City Informatics Excellent Student Competition</span>
+                     <span class="vi" lang="vi">Giải Nhất, Kỳ thi Học sinh giỏi môn Tin học cấp Thành phố Hà Nội</span></p>
+                </li>
+                <li class="award">
+                  <!-- ICOA 2026: individual award (confirmed) -->
+                  <span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+                  <p><span class="en">Silver Medal, ICOA 2026, Australia</span>
+                     <span class="vi" lang="vi">Huy chương Bạc, ICOA 2026, Úc</span></p>
+                </li>
+                <li class="award">
+                  <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+                  <p><span class="en">Third Prize, Green Intelligence Challenge 2026: Innovating with AI! — awarded to the Praelux project team (£500 prize)</span>
+                     <span class="vi" lang="vi">Giải Ba, Green Intelligence Challenge 2026: Innovating with AI! — trao cho nhóm dự án Praelux (giải thưởng 500 bảng Anh)</span></p>
+                </li>
+                <li class="award">
+                  <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+                  <p><span class="en">Third Prize, FIREGUIDE intelligent rescue robot project — <span class="placeholder">[competition name]</span></span>
+                     <span class="vi" lang="vi">Giải Ba, dự án robot cứu hộ thông minh FIREGUIDE — <span class="placeholder">[tên cuộc thi]</span></span></p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 4. RESEARCH & PROJECTS ===================== -->
+    <!-- STRUCTURE
+         1. Featured project  (.featured-project) — a large card for the
+            project that deserves the most attention. To feature a
+            different project, move its content into this layout.
+         2. More projects     (.projects-grid)  — standard cards.
+         3. Skills & independent learning (.skills-grid) — placeholders only.
+
+         Every project uses the same fields, in the same order:
+           Year · Category · Problem / research question · Objectives ·
+           Methodology & technologies ·
+           Results & lessons learned · Images, certificates & links
+
+         LABELS
+           .type-label  → "Technical project" or "Research project"
+           .tag-team    → the project was done by a team
+           .tag-unknown → individual or team not yet confirmed
+         Text in [square brackets] is a placeholder to replace. -->
+    <section id="research" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-number">03</span>
+          <h2>
+            <span class="en">Research &amp; Projects</span>
+            <span class="vi" lang="vi">Nghiên cứu &amp; Dự án</span>
+          </h2>
+        </header>
+
+        <p class="research-intro reveal">
+          <span class="en">Research and technical projects I have worked on. Team projects are clearly labelled.</span>
+          <span class="vi" lang="vi">Các dự án nghiên cứu và kỹ thuật tôi đã tham gia. Dự án nhóm được ghi rõ.</span>
+        </p>
+
+        <!-- ================= 1. FEATURED PROJECT: Praelux ================= -->
+        <p class="group-label reveal">
+          <span class="en">Featured project</span>
+          <span class="vi" lang="vi">Dự án nổi bật</span>
+        </p>
+
+        <article class="featured-project reveal">
+
+          <!-- Left: image and links -->
+          <div class="featured-media">
+            <!-- Photos from the Green Intelligence Challenge 2026 Grand Finale
+                 (original files, shown whole in their 3:2 shape, nothing cropped).
+                 Main photo: award ceremony. Row below: booth + two stage photos. -->
+            <figure class="project-photo">
+              <img src="images/praelux-award-ceremony.jpg" width="2000" height="1334"
+                   alt="The Praelux team, The UWE Scambusters, with their Second Runner-up award and supporters on stage at the Green Intelligence Challenge 2026 Grand Finale" />
+              <figcaption>
+                <span class="en">Award ceremony at the Grand Finale: Second Runner-up (Third Prize)</span>
+                <span class="vi" lang="vi">Lễ trao giải tại vòng chung kết: Giải Ba (Second Runner-up)</span>
+              </figcaption>
+            </figure>
+            <div class="project-photo-row project-photo-row-3">
+              <figure class="project-photo">
+                <img src="images/praelux-booth.jpg" width="2000" height="1334" loading="lazy"
+                     alt="The Praelux team at their exhibition booth, with the Praelux posters, at the Grand Finale" />
+              </figure>
+              <figure class="project-photo">
+                <img src="images/praelux-grand-finale-1.jpg" width="2000" height="1334" loading="lazy"
+                     alt="The Praelux team on stage during the questions session at the Grand Finale, Phenikaa University" />
+              </figure>
+              <figure class="project-photo">
+                <img src="images/praelux-grand-finale-2.jpg" width="2000" height="1334" loading="lazy"
+                     alt="The Praelux team answering questions on stage at the Innovating with AI Grand Finale" />
+              </figure>
+            </div>
+            <p class="photo-row-caption">
+              <span class="en">Exhibition booth and questions from the judges on stage, 29 July 2026</span>
+              <span class="vi" lang="vi">Gian trưng bày và phần hỏi đáp với ban giám khảo trên sân khấu, 29/7/2026</span>
+            </p>
+
+            <!-- Links: replace href="#" with real addresses, delete any you don't need -->
+            <ul class="media-links">
+              <li><a href="#" class="placeholder">
+                <span class="en">[Certificate — Green Intelligence Challenge 2026]</span>
+                <span class="vi" lang="vi">[Chứng nhận — Green Intelligence Challenge 2026]</span></a></li>
+              <li><a href="#" class="placeholder">
+                <span class="en">[Demo or video link]</span>
+                <span class="vi" lang="vi">[Liên kết demo hoặc video]</span></a></li>
+              <li><a href="#" class="placeholder">
+                <span class="en">[Report, slides or code repository]</span>
+                <span class="vi" lang="vi">[Báo cáo, slide hoặc kho mã nguồn]</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Right: title, meta and the question the project addresses -->
+          <div class="featured-body">
+            <div class="card-labels">
+              <span class="type-label"><span class="en">Technical project</span><span class="vi" lang="vi">Dự án kỹ thuật</span></span>
+              <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+            </div>
+
+            <h3>Praelux</h3>
+            <p class="project-summary">
+              <span class="en">AI-powered real-time scam call detection.</span>
+              <span class="vi" lang="vi">Phát hiện cuộc gọi lừa đảo theo thời gian thực bằng trí tuệ nhân tạo.</span>
+            </p>
+
+            <dl class="project-meta">
+              <div>
+                <dt><span class="en">Year</span><span class="vi" lang="vi">Năm</span></dt>
+                <dd>2025 – 2026</dd>
+              </div>
+              <div>
+                <dt><span class="en">Category</span><span class="vi" lang="vi">Lĩnh vực</span></dt>
+                <dd><span class="en">Artificial Intelligence</span><span class="vi" lang="vi">Trí tuệ nhân tạo</span></dd>
+              </div>
+              <div>
+                <dt><span class="en">Team</span><span class="vi" lang="vi">Nhóm</span></dt>
+                <dd>The UWE Scambusters</dd>
+              </div>
+              <div>
+                <dt><span class="en">Status</span><span class="vi" lang="vi">Trạng thái</span></dt>
+                <dd><span class="en">In development</span><span class="vi" lang="vi">Đang phát triển</span></dd>
+              </div>
+            </dl>
+
+            <div class="field">
+              <h4 class="field-label"><span class="en">Problem</span><span class="vi" lang="vi">Vấn đề</span></h4>
+              <p>
+                <span class="en">How can AI help detect scam phone calls while the call is happening? <span class="placeholder">[Add why this problem matters, in your own words.]</span></span>
+                <span class="vi" lang="vi">Làm thế nào để AI hỗ trợ phát hiện cuộc gọi lừa đảo ngay trong lúc cuộc gọi đang diễn ra? <span class="placeholder">[Bổ sung lý do vấn đề này quan trọng, bằng lời của bạn.]</span></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom: full details in two columns -->
+          <div class="featured-details">
+            <div class="field">
+              <h4 class="field-label"><span class="en">Objectives</span><span class="vi" lang="vi">Mục tiêu</span></h4>
+              <p>
+                <span class="en">To give people a real-time warning during a phone call, from the first ring, when the call may be a scam — with older people, who are often targeted, in mind.</span>
+                <span class="vi" lang="vi">Cảnh báo người dùng theo thời gian thực ngay trong cuộc gọi, từ hồi chuông đầu tiên, khi cuộc gọi có dấu hiệu lừa đảo — đặc biệt hướng tới người cao tuổi, nhóm thường bị nhắm đến.</span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Methodology &amp; technologies</span><span class="vi" lang="vi">Phương pháp &amp; công nghệ</span></h4>
+              <p>
+                <span class="en">Praelux checks a call step by step: it first compares the number with a blacklist of known scam numbers; it then reduces background noise, splits the audio into short segments and converts the speech to text; a quick first check is followed by a deeper AI analysis; finally the call receives a risk score, and the user is warned if it looks like a scam.</span>
+                <span class="vi" lang="vi">Praelux kiểm tra cuộc gọi theo từng bước: trước tiên đối chiếu số gọi đến với danh sách đen các số lừa đảo đã biết; sau đó lọc nhiễu, chia âm thanh thành các đoạn ngắn và chuyển giọng nói thành văn bản; tiếp theo là bước kiểm tra nhanh rồi phân tích sâu bằng AI; cuối cùng cuộc gọi được chấm điểm rủi ro và người dùng được cảnh báo nếu có dấu hiệu lừa đảo.</span>
+              </p>
+              <p>
+                <span class="en">Audio is processed on the user’s own device, and only anonymised data is sent.</span>
+                <span class="vi" lang="vi">Âm thanh được xử lý ngay trên thiết bị của người dùng, và chỉ dữ liệu đã ẩn danh mới được gửi đi.</span>
+              </p>
+              <p>
+                <span class="en"><span class="placeholder">[Programming languages, models and tools used.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Ngôn ngữ lập trình, mô hình và công cụ đã sử dụng.]</span></span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Results &amp; lessons learned</span><span class="vi" lang="vi">Kết quả &amp; bài học</span></h4>
+              <p>
+                <span class="en">Third Prize, Green Intelligence Challenge 2026: Innovating with AI! — team award, £500 prize. Grand Finale: 29 July 2026, Phenikaa University, Hanoi.</span>
+                <span class="vi" lang="vi">Giải Ba, Green Intelligence Challenge 2026: Innovating with AI! — giải của nhóm, giải thưởng 500 bảng Anh. Vòng chung kết: 29/7/2026, Trường Đại học Phenikaa, Hà Nội.</span>
+              </p>
+              <p>
+                <span class="en"><span class="placeholder">[What the project achieved and what you learned from it.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Kết quả dự án đạt được và điều bạn học được.]</span></span>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= 2. MORE PROJECTS ================= -->
+        <p class="group-label reveal">
+          <span class="en">More projects</span>
+          <span class="vi" lang="vi">Các dự án khác</span>
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- ---------- FIREGUIDE ---------- -->
+          <article class="project-card reveal">
+            <div class="card-labels">
+              <span class="type-label"><span class="en">Technical project</span><span class="vi" lang="vi">Dự án kỹ thuật</span></span>
+              <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+            </div>
+
+            <h3>FIREGUIDE</h3>
+            <p class="project-summary">
+              <span class="en">Intelligent fire rescue and evacuation robot.</span>
+              <span class="vi" lang="vi">Robot thông minh hỗ trợ cứu hộ và sơ tán khi xảy ra hỏa hoạn.</span>
+            </p>
+
+            <dl class="project-meta">
+              <div>
+                <dt><span class="en">Year</span><span class="vi" lang="vi">Năm</span></dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt><span class="en">Category</span><span class="vi" lang="vi">Lĩnh vực</span></dt>
+                <dd><span class="en">Robotics</span><span class="vi" lang="vi">Robot</span></dd>
+              </div>
+            </dl>
+
+            <div class="field">
+              <h4 class="field-label"><span class="en">Problem</span><span class="vi" lang="vi">Vấn đề</span></h4>
+              <p>
+                <span class="en">How can a robot support rescue and evacuation during a fire?</span>
+                <span class="vi" lang="vi">Làm thế nào để robot hỗ trợ cứu hộ và sơ tán khi xảy ra hỏa hoạn?</span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Objectives</span><span class="vi" lang="vi">Mục tiêu</span></h4>
+              <p>
+                <span class="en"><span class="placeholder">[What the robot was designed to do.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Robot được thiết kế để làm gì.]</span></span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Methodology &amp; technologies</span><span class="vi" lang="vi">Phương pháp &amp; công nghệ</span></h4>
+              <p>
+                <span class="en"><span class="placeholder">[Hardware, sensors, software and programming languages used.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Phần cứng, cảm biến, phần mềm và ngôn ngữ lập trình đã sử dụng.]</span></span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Results &amp; lessons learned</span><span class="vi" lang="vi">Kết quả &amp; bài học</span></h4>
+              <p>
+                <span class="en">Third Prize (team award) — <span class="placeholder">[competition name]</span></span>
+                <span class="vi" lang="vi">Giải Ba (giải của nhóm) — <span class="placeholder">[tên cuộc thi]</span></span>
+              </p>
+              <p>
+                <span class="en"><span class="placeholder">[What you learned from the project.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Điều bạn học được từ dự án.]</span></span>
+              </p>
+            </div>
+
+            <!-- Images, certificates & links -->
+            <div class="field">
+              <h4 class="field-label"><span class="en">Images, certificates &amp; links</span><span class="vi" lang="vi">Hình ảnh, chứng nhận &amp; liên kết</span></h4>
+              <ul class="media-links">
+                <li><a href="#" class="placeholder">
+                  <span class="en">[Photo of the robot]</span>
+                  <span class="vi" lang="vi">[Ảnh robot]</span></a></li>
+                <li><a href="#" class="placeholder">
+                  <span class="en">[Certificate]</span>
+                  <span class="vi" lang="vi">[Chứng nhận]</span></a></li>
+                <li><a href="#" class="placeholder">
+                  <span class="en">[Demo video]</span>
+                  <span class="vi" lang="vi">[Video demo]</span></a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ---------- Vietnamese News Search (research) ---------- -->
+          <article class="project-card reveal">
+            <div class="card-labels">
+              <span class="type-label"><span class="en">Research project</span><span class="vi" lang="vi">Dự án nghiên cứu</span></span>
+              <!-- TODO: change to tag-individual or tag-team once confirmed -->
+              <span class="tag tag-unknown"><span class="en">[Individual or team?]</span><span class="vi" lang="vi">[Cá nhân hay nhóm?]</span></span>
+            </div>
+
+            <h3>
+              <span class="en">Vietnamese News Search</span>
+              <span class="vi" lang="vi">Tìm kiếm tin tức tiếng Việt</span>
+            </h3>
+            <p class="project-summary">
+              <span class="en">Comparing keyword-based and semantic search models for Vietnamese news.</span>
+              <span class="vi" lang="vi">So sánh mô hình tìm kiếm theo từ khóa và mô hình tìm kiếm ngữ nghĩa đối với tin tức tiếng Việt.</span>
+            </p>
+
+            <dl class="project-meta">
+              <div>
+                <dt><span class="en">Year</span><span class="vi" lang="vi">Năm</span></dt>
+                <dd><span class="placeholder">[Year]</span></dd>
+              </div>
+              <div>
+                <dt><span class="en">Category</span><span class="vi" lang="vi">Lĩnh vực</span></dt>
+                <dd><span class="en">Information Retrieval · Natural Language Processing</span><span class="vi" lang="vi">Truy xuất thông tin · Xử lý ngôn ngữ tự nhiên</span></dd>
+              </div>
+            </dl>
+
+            <div class="field">
+              <h4 class="field-label"><span class="en">Research question</span><span class="vi" lang="vi">Câu hỏi nghiên cứu</span></h4>
+              <p>
+                <span class="en">How do keyword-based and semantic search models compare when searching Vietnamese news? <span class="placeholder">[Refine the exact question if needed.]</span></span>
+                <span class="vi" lang="vi">Mô hình tìm kiếm theo từ khóa và mô hình tìm kiếm ngữ nghĩa khác nhau như thế nào khi tìm kiếm tin tức tiếng Việt? <span class="placeholder">[Điều chỉnh câu hỏi chính xác nếu cần.]</span></span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Objectives</span><span class="vi" lang="vi">Mục tiêu</span></h4>
+              <p>
+                <span class="en"><span class="placeholder">[What the research aimed to find out.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Nghiên cứu nhằm tìm hiểu điều gì.]</span></span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Methodology &amp; technologies</span><span class="vi" lang="vi">Phương pháp &amp; công nghệ</span></h4>
+              <p>
+                <span class="en"><span class="placeholder">[Dataset, models compared, evaluation method and tools used.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Bộ dữ liệu, các mô hình được so sánh, phương pháp đánh giá và công cụ đã sử dụng.]</span></span>
+              </p>
+            </div>
+            <div class="field">
+              <h4 class="field-label"><span class="en">Results &amp; lessons learned</span><span class="vi" lang="vi">Kết quả &amp; bài học</span></h4>
+              <p>
+                <span class="en"><span class="placeholder">[Main findings and what you learned.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Kết quả chính và điều bạn học được.]</span></span>
+              </p>
+            </div>
+
+            <!-- Images, certificates & links -->
+            <div class="field">
+              <h4 class="field-label"><span class="en">Images, certificates &amp; links</span><span class="vi" lang="vi">Hình ảnh, chứng nhận &amp; liên kết</span></h4>
+              <ul class="media-links">
+                <li><a href="#" class="placeholder">
+                  <span class="en">[Research paper or report]</span>
+                  <span class="vi" lang="vi">[Bài nghiên cứu hoặc báo cáo]</span></a></li>
+                <li><a href="#" class="placeholder">
+                  <span class="en">[Charts or results table]</span>
+                  <span class="vi" lang="vi">[Biểu đồ hoặc bảng kết quả]</span></a></li>
+                <li><a href="#" class="placeholder">
+                  <span class="en">[Code repository]</span>
+                  <span class="vi" lang="vi">[Kho mã nguồn]</span></a></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ================= 3. SKILLS & INDEPENDENT LEARNING =================
+             Placeholders only: list the skills and learning you can show evidence for. -->
+        <p class="group-label reveal">
+          <span class="en">Skills &amp; independent learning</span>
+          <span class="vi" lang="vi">Kỹ năng &amp; tự học</span>
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h4><span class="en">Programming languages</span><span class="vi" lang="vi">Ngôn ngữ lập trình</span></h4>
+            <p>
+              <span class="en"><span class="placeholder">[e.g. languages you use regularly]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Ví dụ: các ngôn ngữ bạn thường dùng]</span></span>
+            </p>
+          </div>
+          <div class="skill-card reveal">
+            <h4><span class="en">Frameworks &amp; tools</span><span class="vi" lang="vi">Thư viện &amp; công cụ</span></h4>
+            <p>
+              <span class="en"><span class="placeholder">[AI / ML libraries, hardware, other tools]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Thư viện AI / học máy, phần cứng, công cụ khác]</span></span>
+            </p>
+          </div>
+          <div class="skill-card reveal">
+            <h4><span class="en">Courses &amp; self-study</span><span class="vi" lang="vi">Khóa học &amp; tự học</span></h4>
+            <p>
+              <span class="en"><span class="placeholder">[Online courses, books or topics you studied on your own]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Khóa học trực tuyến, sách hoặc chủ đề bạn tự tìm hiểu]</span></span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== 5. AWARDS & ACHIEVEMENTS ===================== -->
+    <!-- STRUCTURE
+         1. Featured award (.award-feature): ICOA 2026 Silver Medal
+            (an INDIVIDUAL award: labelled tag-individual, never tag-team)
+            - highlights video: images/icoa-2026-highlights.MP4
+            - two photos: the certificate with the medal, and the award ceremony
+         2. Other awards & results (.results-list), with a space for new ones
+
+         PHOTOS (in the "images" folder, original files, never edited)
+           images/icoa-2026-certificate.jpg  → certificate and medal (landscape)
+           images/icoa-2026-ceremony.jpg     → award ceremony (landscape, 3:2)
+         Until a file exists, a dashed placeholder box is shown instead
+         (script.js switches between the photo and the placeholder). -->
+    <section id="awards" class="section section-tinted">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-number">04</span>
+          <h2>
+            <span class="en">Awards &amp; Achievements</span>
+            <span class="vi" lang="vi">Giải thưởng &amp; Thành tích</span>
+          </h2>
+        </header>
+
+        <!-- ================= 1. FEATURED AWARD: ICOA 2026 ================= -->
+        <article class="award-feature reveal">
+
+          <!-- Top: medal badge + title -->
+          <div class="award-heading">
+            <div class="medal" aria-hidden="true">
+              <span class="medal-label">ICOA</span>
+              <span class="medal-year">2026</span>
+            </div>
+            <div>
+              <!-- Individual award: not linked to any team project -->
+              <div class="card-labels">
+                <span class="tag tag-individual"><span class="en">Individual achievement</span><span class="vi" lang="vi">Thành tích cá nhân</span></span>
+              </div>
+              <p class="award-kicker">
+                <span class="en">Silver Medal</span>
+                <span class="vi" lang="vi">Huy chương Bạc</span>
+              </p>
+              <h3>
+                <span class="en">International Cyber Olympiad in AI (ICOA) 2026</span>
+                <span class="vi" lang="vi">Kỳ thi Olympic Quốc tế về Trí tuệ nhân tạo ICOA 2026</span>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Middle: key facts (left) and description (right) -->
+          <div class="award-body">
+            <dl class="award-facts">
+              <div>
+                <dt><span class="en">Award</span><span class="vi" lang="vi">Giải thưởng</span></dt>
+                <dd><span class="en">Silver Medal</span><span class="vi" lang="vi">Huy chương Bạc</span></dd>
+              </div>
+              <div>
+                <dt><span class="en">Location</span><span class="vi" lang="vi">Địa điểm</span></dt>
+                <dd><span class="en">Sydney, Australia</span><span class="vi" lang="vi">Sydney, Úc</span></dd>
+              </div>
+              <div>
+                <dt><span class="en">Dates</span><span class="vi" lang="vi">Thời gian</span></dt>
+                <dd><span class="en">28 June – 2 July 2026</span><span class="vi" lang="vi">28/6 – 2/7/2026</span></dd>
+              </div>
+              <div>
+                <dt><span class="en">Field</span><span class="vi" lang="vi">Lĩnh vực</span></dt>
+                <dd><span class="en">Artificial Intelligence</span><span class="vi" lang="vi">Trí tuệ nhân tạo</span></dd>
+              </div>
+              <!-- National team he competed with (the medal itself is individual) -->
+              <div class="award-fact-wide">
+                <dt><span class="en">Representing</span><span class="vi" lang="vi">Đại diện</span></dt>
+                <dd><span class="en">Team Vietnam</span><span class="vi" lang="vi">Đội tuyển Việt Nam</span></dd>
+              </div>
+              <!-- Organiser, as printed on the certificate -->
+              <div class="award-fact-wide">
+                <dt><span class="en">Organiser</span><span class="vi" lang="vi">Đơn vị tổ chức</span></dt>
+                <dd>Australian STEM and Robotics Advancement Association (ASRA)</dd>
+              </div>
+            </dl>
+
+            <div class="award-text">
+              <p>
+                <span class="en">I received a Silver Medal at the International Cyber Olympiad in AI (ICOA) 2026, held in Sydney, Australia, from 28 June to 2 July 2026.</span>
+                <span class="vi" lang="vi">Tôi đạt Huy chương Bạc tại Kỳ thi Olympic Quốc tế về Trí tuệ nhân tạo ICOA 2026, tổ chức tại Sydney, Úc, từ ngày 28/6 đến ngày 2/7/2026.</span>
+              </p>
+              <p>
+                <span class="en">I competed as a member of Team Vietnam. The Silver Medal itself is an individual award: it recognises my own performance in the olympiad and was presented to me personally.</span>
+                <span class="vi" lang="vi">Tôi tham dự kỳ thi với tư cách thành viên Đội tuyển Việt Nam. Bản thân Huy chương Bạc là giải thưởng cá nhân: huy chương ghi nhận kết quả thi của riêng tôi tại kỳ thi và được trao trực tiếp cho tôi.</span>
+              </p>
+
+              <!-- About the competition: facts taken from the official ICOA 2026 poster -->
+              <p>
+                <span class="en">ICOA 2026 is described by its organisers as the world’s first AI security olympiad for secondary school students. The competition was held entirely in a command-line interface (CLI) and had three parts: AI4CTF (“AI is your teammate”), CTF4AI (“AI is your target”) and CTF4EAI, a pioneer round (“AI is embodied”).</span>
+                <span class="vi" lang="vi">Theo ban tổ chức, ICOA 2026 là kỳ thi Olympic về an ninh trí tuệ nhân tạo đầu tiên trên thế giới dành cho học sinh trung học. Toàn bộ cuộc thi diễn ra trên giao diện dòng lệnh (CLI), gồm ba phần: AI4CTF (“AI là đồng đội”), CTF4AI (“AI là mục tiêu”) và CTF4EAI – vòng thi tiên phong (“AI hiện thân”).</span>
+              </p>
+              <p>
+                <span class="en">Participants came from 19 teams across five continents, with Kuwait attending as an observer nation.</span>
+                <span class="vi" lang="vi">Thí sinh đến từ 19 đội thuộc năm châu lục, cùng Kuwait tham dự với tư cách quốc gia quan sát viên.</span>
+              </p>
+              <!-- Placeholder: add only details you can confirm -->
+              <p>
+                <span class="en"><span class="placeholder">[In your own words: how you prepared and what you learned.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Bằng lời của bạn: bạn đã chuẩn bị như thế nào và học được gì.]</span></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Video: ICOA 2026 highlights (original file, unchanged).
+               "controls" shows play/pause/volume/fullscreen buttons.
+               "preload=metadata" loads only the length and first frame, not the
+               whole 14 MB file, until the visitor presses play.
+               "playsinline" lets it play inside the page on iPhones.
+               Note: the file extension is upper-case (.MP4) — keep it exactly
+               like this, because many web hosts treat upper/lower case differently. -->
+          <figure class="award-video">
+            <video controls preload="metadata" playsinline width="1024" height="576">
+              <source src="images/icoa-2026-highlights.MP4" type="video/mp4" />
+              <!-- Shown only in very old browsers that cannot play video -->
+              <a href="images/icoa-2026-highlights.MP4">
+                <span class="en">Download the ICOA 2026 video</span>
+                <span class="vi" lang="vi">Tải video ICOA 2026</span>
+              </a>
+            </video>
+            <figcaption>
+              <span class="en">ICOA 2026 highlights video</span>
+              <span class="vi" lang="vi">Video tổng hợp kỳ thi ICOA 2026</span>
+            </figcaption>
+          </figure>
+
+          <!-- Bottom: two photos side by side, both shown in full (no cropping).
+               The column widths in style.css make the two photos the same height. -->
+          <div class="award-photos">
+            <figure class="award-photo award-photo-certificate">
+              <img src="images/icoa-2026-certificate.jpg"
+                   alt="ICOA 2026 Silver Medal certificate awarded to Do Ha Duy Phong, shown with the medal" />
+              <div class="photo-placeholder">
+                <span class="en">[Certificate and medal photo]</span>
+                <span class="vi" lang="vi">[Ảnh giấy chứng nhận và huy chương]</span>
+                <code>images/icoa-2026-certificate.jpg</code>
+              </div>
+              <figcaption>
+                <span class="en">Silver Medal certificate and medal</span>
+                <span class="vi" lang="vi">Giấy chứng nhận và Huy chương Bạc</span>
+              </figcaption>
+            </figure>
+
+            <figure class="award-photo award-photo-ceremony">
+              <img src="images/icoa-2026-ceremony.jpg"
+                   alt="Do Ha Duy Phong on stage with his Silver Medal certificate at the ICOA 2026 award ceremony in Sydney" />
+              <div class="photo-placeholder">
+                <span class="en">[Award ceremony photo]</span>
+                <span class="vi" lang="vi">[Ảnh lễ trao giải]</span>
+                <code>images/icoa-2026-ceremony.jpg</code>
+              </div>
+              <figcaption>
+                <span class="en">Award ceremony, ICOA 2026, Sydney</span>
+                <span class="vi" lang="vi">Lễ trao giải ICOA 2026 tại Sydney</span>
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- ================= SCHOLARSHIP (individual) =================
+             Photo: images/uwe-phenikaa-scholarship.jpg (original, 4:3, shown whole) -->
+        <p class="group-label reveal">
+          <span class="en">Scholarship</span>
+          <span class="vi" lang="vi">Học bổng</span>
+        </p>
+
+        <article class="award-secondary reveal">
+          <figure class="award-secondary-photo">
+            <img src="images/uwe-phenikaa-scholarship.jpg" width="2000" height="1500" loading="lazy"
+                 alt="Do Ha Duy Phong holding the UWE Bristol – Phenikaa Campus Scholarship Award Certificate for 136,500,000 VND" />
+            <figcaption>
+              <span class="en">Scholarship Award Certificate</span>
+              <span class="vi" lang="vi">Giấy chứng nhận học bổng</span>
+            </figcaption>
+          </figure>
+
+          <div class="award-secondary-body">
+            <div class="card-labels">
+              <span class="tag tag-individual"><span class="en">Individual achievement</span><span class="vi" lang="vi">Thành tích cá nhân</span></span>
+            </div>
+            <p class="award-kicker">
+              <span class="en">Scholarship · 2026</span>
+              <span class="vi" lang="vi">Học bổng · 2026</span>
+            </p>
+            <h3>UK Experiencing &amp; Phoenix Heart Scholarship</h3>
+
+            <dl class="award-facts">
+              <div>
+                <dt><span class="en">Awarded by</span><span class="vi" lang="vi">Đơn vị trao</span></dt>
+                <dd>UWE Bristol – Phenikaa Campus</dd>
+              </div>
+              <div>
+                <dt><span class="en">Value</span><span class="vi" lang="vi">Giá trị</span></dt>
+                <dd>136.500.000 VND</dd>
+              </div>
+            </dl>
+
+            <p>
+              <span class="en">I received the UK Experiencing &amp; Phoenix Heart Scholarship from UWE Bristol – Phenikaa Campus, with a value of 136,500,000 VND.</span>
+              <span class="vi" lang="vi">Tôi nhận Học bổng UK Experiencing &amp; Phoenix Heart của UWE Bristol – Phenikaa Campus, trị giá 136.500.000 VND.</span>
+            </p>
+            <p>
+              <span class="en"><span class="placeholder">[What the scholarship covers, if you would like to add it.]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Học bổng hỗ trợ những gì, nếu bạn muốn bổ sung.]</span></span>
+            </p>
+          </div>
+        </article>
+
+        <!-- ================= 2. OTHER AWARDS & RESULTS =================
+             One <li> per award, newest first. Labels:
+               tag-individual = individual award, tag-team = team project award.
+             To add a new result, copy the placeholder row at the bottom. -->
+        <p class="group-label reveal">
+          <span class="en">Other awards &amp; results</span>
+          <span class="vi" lang="vi">Các giải thưởng &amp; kết quả khác</span>
+        </p>
+
+        <ul class="results-list reveal">
+          <li>
+            <span class="result-year">2026</span>
+            <div class="result-body">
+              <p><span class="en">First Prize, Hanoi City Informatics Excellent Student Competition</span>
+                 <span class="vi" lang="vi">Giải Nhất, Kỳ thi Học sinh giỏi môn Tin học cấp Thành phố Hà Nội</span></p>
+            </div>
+            <span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+          </li>
+          <li>
+            <span class="result-year">2026</span>
+            <div class="result-body">
+              <p><span class="en">Third Prize, Green Intelligence Challenge 2026: Innovating with AI! — Praelux project (£500 prize)</span>
+                 <span class="vi" lang="vi">Giải Ba, Green Intelligence Challenge 2026: Innovating with AI! — dự án Praelux (giải thưởng 500 bảng Anh)</span></p>
+            </div>
+            <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+          </li>
+          <li>
+            <span class="result-year">2026</span>
+            <div class="result-body">
+              <p><span class="en">Third Prize, FIREGUIDE intelligent rescue robot project — <span class="placeholder">[competition name]</span></span>
+                 <span class="vi" lang="vi">Giải Ba, dự án robot cứu hộ thông minh FIREGUIDE — <span class="placeholder">[tên cuộc thi]</span></span></p>
+            </div>
+            <span class="tag tag-team"><span class="en">Team project</span><span class="vi" lang="vi">Dự án nhóm</span></span>
+          </li>
+          <li>
+            <span class="result-year">2025–26</span>
+            <div class="result-body">
+              <p><span class="en">Second Prize in Informatics, Excellent Student Competition for Grades 10–11, High School Cluster No. 4 (school year 2025–2026)</span>
+                 <span class="vi" lang="vi">Giải Nhì môn Tin học, Kỳ thi Học sinh giỏi các môn văn hoá lớp 10, lớp 11 Cụm trường THPT số 04, năm học 2025–2026</span></p>
+              <!-- Certificate photo (click to open full size) -->
+              <figure class="result-cert">
+                <a href="images/hsg-tin-hoc-cum-2025-2026.jpg" target="_blank" rel="noopener">
+                  <img src="images/hsg-tin-hoc-cum-2025-2026.jpg" width="1152" height="800" loading="lazy" alt="Certificate for Second Prize in Informatics, High School Cluster No. 4, school year 2025–2026" />
+                </a>
+                <figcaption>
+                  <span class="en">Certificate, 24 March 2026 — click to enlarge</span>
+                  <span class="vi" lang="vi">Giấy chứng nhận, ngày 24/3/2026 — bấm để xem ảnh lớn</span>
+                </figcaption>
+              </figure>
+            </div>
+            <span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+          </li>
+          <li>
+            <span class="result-year">2024–25</span>
+            <div class="result-body">
+              <p><span class="en">First Prize in Informatics, Excellent Student Competition for Grades 10–11, Thanh Xuan – Cau Giay High School Cluster (school year 2024–2025)</span>
+                 <span class="vi" lang="vi">Giải Nhất môn Tin học, Kỳ thi Học sinh giỏi các môn văn hoá lớp 10, lớp 11 Cụm trường THPT Thanh Xuân – Cầu Giấy, năm học 2024–2025</span></p>
+              <!-- Certificate photo (click to open full size) -->
+              <figure class="result-cert">
+                <a href="images/hsg-tin-hoc-cum-2024-2025.jpg" target="_blank" rel="noopener">
+                  <img src="images/hsg-tin-hoc-cum-2024-2025.jpg" width="1168" height="784" loading="lazy" alt="Certificate for First Prize in Informatics, Thanh Xuan – Cau Giay High School Cluster, school year 2024–2025" />
+                </a>
+                <figcaption>
+                  <span class="en">Certificate, 24 March 2025 — click to enlarge</span>
+                  <span class="vi" lang="vi">Giấy chứng nhận, ngày 24/3/2025 — bấm để xem ảnh lớn</span>
+                </figcaption>
+              </figure>
+            </div>
+            <span class="tag tag-individual"><span class="en">Individual</span><span class="vi" lang="vi">Cá nhân</span></span>
+          </li>
+
+          <!-- Space for future awards: copy this row and fill it in -->
+          <li class="result-placeholder">
+            <span class="result-year placeholder">[Year]</span>
+            <div class="result-body">
+              <p><span class="en"><span class="placeholder">[Award, competition name and level]</span></span>
+                 <span class="vi" lang="vi"><span class="placeholder">[Giải thưởng, tên cuộc thi và cấp độ]</span></span></p>
+            </div>
+            <span class="tag tag-unknown"><span class="en">[Individual or team]</span><span class="vi" lang="vi">[Cá nhân hoặc nhóm]</span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 6. REFLECTIONS & CONTACT ===================== -->
+    <section id="contact" class="section section-navy">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-number">05</span>
+          <h2>
+            <span class="en">Reflections &amp; Contact</span>
+            <span class="vi" lang="vi">Suy ngẫm &amp; Liên hệ</span>
+          </h2>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Reflections: please write these in your own words -->
+          <div class="reflection reveal">
+            <blockquote>
+              <p>
+                <span class="en"><span class="placeholder">[A short reflection on what you have learned during 2024–2026.]</span></span>
+                <span class="vi" lang="vi"><span class="placeholder">[Một đoạn suy ngẫm ngắn về những điều bạn đã học được trong giai đoạn 2024–2026.]</span></span>
+              </p>
+            </blockquote>
+            <p>
+              <span class="en"><span class="placeholder">[Your goals for the future and what you hope to explore next.]</span></span>
+              <span class="vi" lang="vi"><span class="placeholder">[Mục tiêu tương lai và điều bạn muốn khám phá tiếp theo.]</span></span>
+            </p>
+          </div>
+
+          <!-- Contact details: replace the placeholders and the href values -->
+          <div class="contact-card reveal">
+            <h3><span class="en">Get in touch</span><span class="vi" lang="vi">Kết nối với tôi</span></h3>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">Email</span>
+                <a href="mailto:your.email@example.com" class="placeholder">[your.email@example.com]</a>
+              </li>
+              <li>
+                <span class="contact-label">LinkedIn</span>
+                <a href="#" class="placeholder">[linkedin.com/in/your-profile]</a>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a href="#" class="placeholder">[github.com/your-username]</a>
+              </li>
+              <li>
+                <span class="contact-label"><span class="en">Location</span><span class="vi" lang="vi">Địa điểm</span></span>
+                <span><span class="en">Hanoi, Vietnam</span><span class="vi" lang="vi">Hà Nội, Việt Nam</span></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- The year is filled in automatically by script.js -->
+      <p>© <span id="year"></span> Do Ha Duy Phong</p>
+      <a href="#home" class="back-to-top">
+        <span class="en">Back to top ↑</span>
+        <span class="vi" lang="vi">Lên đầu trang ↑</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Our JavaScript. It is loaded last so the HTML above already exists. -->
+  <script src="script.js"></script>
+</body>
+</html>
