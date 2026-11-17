@@ -790,6 +790,28 @@ h3 .vi {
   margin: 28px auto 0;
 }
 
+/* "Class trip" story: same spacing as "Giving back" */
+.story-trip {
+  margin-top: 56px;
+}
+
+/* Date line under a story title */
+.story-meta {
+  margin: -16px 0 26px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.story-meta .vi {
+  font-size: 0.95em;
+}
+
+/* 4:3 photo + slightly wider photo (1051x752): column widths
+   follow each photo's shape so both have the same height */
+.story-photos-trip {
+  grid-template-columns: 1333fr 1398fr;
+}
+
 .story-photo {
   margin: 0;
 }
@@ -2169,7 +2191,8 @@ h3 .vi {
 
   /* Phones: photos one below the other */
   .story-photos-equal,
-  .story-photos-mixed {
+  .story-photos-mixed,
+  .story-photos-trip {
     grid-template-columns: 1fr;
   }
 
