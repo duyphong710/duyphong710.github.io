@@ -784,6 +784,12 @@ h3 .vi {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* A single document photo (letter): narrower, centred */
+.story-photos-letter {
+  max-width: 420px;
+  margin: 28px auto 0;
+}
+
 .story-photo {
   margin: 0;
 }
