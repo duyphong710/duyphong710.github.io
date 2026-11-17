@@ -770,6 +770,20 @@ h3 .vi {
   grid-template-columns: 9fr 16fr;
 }
 
+/* "Giving back" story placed after the timeline */
+.story-giving {
+  margin-top: 56px;
+}
+
+/* Rows of tall (3:4) photos: 2 or 3 equal columns */
+.story-photos-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.story-photos-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .story-photo {
   margin: 0;
 }
@@ -2151,6 +2165,11 @@ h3 .vi {
   .story-photos-equal,
   .story-photos-mixed {
     grid-template-columns: 1fr;
+  }
+
+  /* Phones: tall photos two per row */
+  .story-photos-3 {
+    grid-template-columns: 1fr 1fr;
   }
 
   .score-list {
