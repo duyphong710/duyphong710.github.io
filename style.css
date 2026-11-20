@@ -2800,3 +2800,20 @@ strong.pub-author-name {
 .pub-overview p {
   margin-bottom: 14px;
 }
+
+/* =====================================================================
+   EDIT MODE: placeholders shown in a frame
+   When "hide-empty" is removed from <body> (automatically on your own
+   computer, see script.js), every [placeholder] gets a dashed gold frame
+   so it is easy to see what still needs real content.
+   ===================================================================== */
+body:not(.hide-empty) .placeholder {
+  display: inline-block;
+  margin: 4px 0;
+  padding: 6px 12px;
+  border: 1.5px dashed var(--accent);
+  border-radius: 6px;
+  background: rgba(176, 141, 87, 0.12);
+  opacity: 1;
+  line-height: 1.5;
+}

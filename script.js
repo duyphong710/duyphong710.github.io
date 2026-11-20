@@ -127,3 +127,20 @@ document.querySelectorAll(".award-photo img").forEach(function (img) {
 /* ---------- Footer year ---------- */
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+
+/* ---------- Edit mode: show placeholders on your own computer ----------
+   On the public website the <body> keeps the class "hide-empty", so
+   visitors never see empty [placeholder] boxes.
+   When you open the site on your own computer (localhost or a file),
+   the class is removed, so every placeholder appears in a dashed frame
+   and you can see what still needs to be filled in.
+   On the public website, add "?edit" to the address
+   (https://duyphong710.github.io/?edit) to see the same frames. */
+
+if (location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1" ||
+    location.protocol === "file:" ||
+    new URLSearchParams(location.search).has("edit")) {
+  document.body.classList.remove("hide-empty");
+}
